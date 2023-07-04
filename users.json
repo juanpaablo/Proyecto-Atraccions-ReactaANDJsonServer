@@ -1,0 +1,107 @@
+{
+  "users": [
+    {
+      "id": 1,
+      "name": "jose",
+      "lastname": "lopez",
+      "dni": 44580721,
+      "email": "joseperez@gmail.com",
+      "comments": ""
+    },
+    {},
+    {
+      "name": "juan pablo",
+      "lastname": "montiveros",
+      "dni": "44580735",
+      "email": "pablosalazar@outlook.com",
+      "id": 2
+    },
+    {
+      "comments": "me gusto la atraccion",
+      "id": 3
+    },
+    {
+      "comments": "buenisimo el lugar",
+      "email": "pablosalazar@outlook.com",
+      "id": 4
+    }
+  ],
+  "atracciones": [
+    {
+      "id": 8,
+      "name": "coliseo romano europeo",
+      "direccion": "roma 14",
+      "img": "https://images.unsplash.com/photo-1582204545593-1356b96cab4b?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=435&q=80"
+    },
+    {
+      "id": 9,
+      "name": "rueda de la fortuna",
+      "direccion": "kentucki 271",
+      "img": "https://images.unsplash.com/photo-1587659901518-7020d4413085?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1074&q=80"
+    },
+    {
+      "id": 10,
+      "name": "iglesia clasica",
+      "direccion": "dinamarca 285",
+      "img": "https://images.unsplash.com/photo-1579434502435-e54701d2533d?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=370&q=80"
+    },
+    {
+      "name": "sd",
+      "direccion": "dsds",
+      "img": "sds",
+      "id": 11
+    }
+  ],
+  "comentarios": [
+    {
+      "email": "joseperez@gmail.com",
+      "comments": "me gusto la atraccion",
+      "id": 1,
+      "atraccionid": 1
+    },
+    {},
+    {
+      "comments": "buena la atraccion",
+      "email": "pablosalazar@outlook.com",
+      "id": 2,
+      "atraccionid": 2
+    },
+    {},
+    {
+      "comments": "muy bueno el coliseo",
+      "email": "pablosalazar@outlook.com",
+      "atraccionId": "8",
+      "id": 3
+    },
+    {
+      "comments": "buena la montaña rusa brother",
+      "email": "pablosalazar@outlook.com",
+      "atraccionId": "9",
+      "id": 4
+    },
+    {
+      "comments": "me gusto la gente ",
+      "email": "pablosalazar@outlook.com",
+      "atraccionId": "8",
+      "id": 5
+    },
+    {
+      "comments": "una bomba el lago",
+      "email": "pablosalazar@outlook.com",
+      "atraccionId": "9",
+      "id": 6
+    },
+    {
+      "comments": "muy bonito me encanto,el que hiso la pagina es muy bueno deberian darle mucha plata,asi le compra un celular nuevo a su hermana querida",
+      "email": "pablosalazar@outlook.com",
+      "atraccionId": "8",
+      "id": 7
+    },
+    {
+      "comments": "me gusto mucho el estilo clasico de la iglesia",
+      "email": "pablosalazar@outlook.com",
+      "atraccionId": "10",
+      "id": 8
+    }
+  ]
+}
