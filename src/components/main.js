@@ -53,7 +53,7 @@ const cerrarsession =() =>{
   return <div> <h1> bienvenido {username}  </h1> <button onClick={cerrarsession} >cerrar session</button> <div> <Link to="/atraccion" > <button>agregar atraccion</button> </Link>
      <Link to="/Register" > <button>registrar usuarios</button> </Link>
      <Link to="/Login2" > <button>login</button> </Link>
-     
+     <Link to="/maps"> <button> prueba de mapas</button> </Link>
    {content}</div></div>
 }
 

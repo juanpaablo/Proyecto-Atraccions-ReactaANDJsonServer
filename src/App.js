@@ -6,6 +6,7 @@ import Atraccion from './components/atraccion';
 import Listado from './components/main';
 import AtraccionDetalles from './components/atraccionDetalles';
 import EditarAtraccion from './components/Edit';
+import Maps from "./components/maps"
 
 function App() {
   return (
@@ -17,6 +18,7 @@ function App() {
         <Route path="/register" element={<Register/>} />
         <Route path="/atracciones/:id" element={<AtraccionDetalles/>} />
         <Route path="/Edit" element={<EditarAtraccion/>} />
+        <Route path="/maps" element={<Maps/>} />
       </Routes>
     </Router>
   );

@@ -1,6 +1,9 @@
 import React, { useEffect, useState } from "react";
 import { Link, useParams } from "react-router-dom";
+import { GoogleMap, useJsApiLoader } from "@react-google-maps/api";
 import axios from "axios";
+import Mapeado from "./maps";
+import "../styles/atracciondetalles.css"
 
 const AtraccionDetalles = () => {
   const { id } = useParams();
@@ -11,6 +14,7 @@ const AtraccionDetalles = () => {
   const [commentsActuales, setCommentsActuales] = useState({
     comments: ""
   });
+  const [coordenadas, setcoordenadas]= useState(null)
 
   const bd = "http://localhost:3005/comentarios";
   const Url = "http://localhost:3005/comentarios";
@@ -69,6 +73,9 @@ const AtraccionDetalles = () => {
       try {
         const response = await axios.get(url);
         setDetalles(response.data);
+        const lat = parseFloat(response.data.latitud);
+      const lng = parseFloat(response.data.longitud);
+      setcoordenadas({ lat, lng });
       } catch (error) {
         console.error("Error al obtener los detalles de la atracción:", error);
       }
@@ -95,7 +102,8 @@ const AtraccionDetalles = () => {
           <h2>{detalles.name}</h2>
           <img src={detalles.img} alt="Imagen de la atracción" />
           <p>{detalles.direccion}</p>
-          {showInput && (
+          <Mapeado center={coordenadas}  />
+          {showInput && coordenadas && (
             <div className="container">
               <form onSubmit={addComment}>
                 <input

@@ -31,7 +31,9 @@
       "id": 8,
       "name": "coliseo romano europeo",
       "direccion": "roma 14",
-      "img": "https://images.unsplash.com/photo-1582204545593-1356b96cab4b?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=435&q=80"
+      "img": "https://images.unsplash.com/photo-1582204545593-1356b96cab4b?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=435&q=80",
+      "latitud": "41.8902",
+      "longitud": "12.4922"
     },
     {
       "id": 9,
@@ -50,6 +52,14 @@
       "direccion": "dsds",
       "img": "sds",
       "id": 11
+    },
+    {
+      "name": "cristo redentor",
+      "direccion": "rio de janeiro 911",
+      "img": "https://images.unsplash.com/photo-1564659907532-6b5f98c8e70f?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=437&q=80",
+      "latitud": "-22.9519",
+      "longitud": "-43.2105",
+      "id": 12
     }
   ],
   "comentarios": [
