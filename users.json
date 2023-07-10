@@ -48,18 +48,28 @@
       "img": "https://images.unsplash.com/photo-1579434502435-e54701d2533d?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=370&q=80"
     },
     {
-      "name": "sd",
-      "direccion": "dsds",
-      "img": "sds",
-      "id": 11
-    },
-    {
       "name": "cristo redentor",
       "direccion": "rio de janeiro 911",
       "img": "https://images.unsplash.com/photo-1564659907532-6b5f98c8e70f?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=437&q=80",
       "latitud": "-22.9519",
       "longitud": "-43.2105",
       "id": 12
+    },
+    {
+      "name": "ciudad de vaticano",
+      "direccion": "vaticano 911",
+      "img": "https://plus.unsplash.com/premium_photo-1661962860425-373f38f8e6f4?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=435&q=80",
+      "latitud": "41.9029",
+      "longitud": "12.4534",
+      "id": 13
+    },
+    {
+      "name": "cataratas del iguazu",
+      "direccion": "catara 923",
+      "img": "https://images.unsplash.com/photo-1538703012804-b74999aa11b9?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=774&q=80",
+      "latitud": "-25.6953",
+      "longitud": "-54.4367",
+      "id": 14
     }
   ],
   "comentarios": [
