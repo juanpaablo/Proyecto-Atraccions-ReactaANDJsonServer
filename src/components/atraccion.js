@@ -8,7 +8,8 @@ function Atraccion (){
    direccion:"",
    img:"",
    latitud:"",
-   longitud:""
+   longitud:"",
+   pais:""
  });
  //el e.target.name hace referencia a la propiedad del input del html basicamente captura lo que haya en ese input con el nombre y lo pasa a la database
 const handleChange= (e) =>{
@@ -35,7 +36,8 @@ const resetform =() =>{
         direccion:"",
         img:"",
         latitud:"",
-        longitud:""
+        longitud:"",
+        pais:""
     })
 }
 return (
@@ -97,6 +99,18 @@ return (
             //hace referencia a esto
             name="longitud"
             value={NewAtraccion.longitud}
+            onChange={handleChange}
+          />
+        </div>
+        <div className="form-group">
+          <label className="label"> pais: </label>
+          <input
+            className="input"
+            placeholder="insert el pais de la atraccion"
+            type="text"
+            //hace referencia a esto
+            name="pais"
+            value={NewAtraccion.pais}
             onChange={handleChange}
           />
         </div>

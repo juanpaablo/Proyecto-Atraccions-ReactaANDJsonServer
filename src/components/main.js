@@ -11,6 +11,7 @@ function Listado() {
 
   const [Filteredlist, setFilteredlist]= useState([])
   const [List, setNewList] = useState([]);
+  const [Selectoption, setSelectoption]= useState ("")
 
   const Getlist = async () => {
     try {
@@ -33,8 +34,22 @@ function Listado() {
   useEffect(() => {
     Getlist().then((data) => {
       setNewList(data);
+      setFilteredlist(data)
     });
   }, []);
+  useEffect(() => {
+    const filtered = List.filter((item) => {
+      if (Selectoption === "italia") {
+        return item.pais === "italia";
+      } else if (Selectoption === "argentina") {
+        return item.pais === "argentina";
+      } else {
+        return true; // Si no se selecciona ninguna opción, mostrar todos los elementos
+      }
+    });
+    setFilteredlist(filtered);
+    //estos arreglos se aseguran de que se actualice cada vez que haya cambio en esos estados
+  }, [List, Selectoption]);
   
   const filtrarAtracciones = (termino) => {
     const resBusqueda = List.filter((atraccion) =>
@@ -75,6 +90,14 @@ function Listado() {
     <div>
       <h1>bienvenido {username}</h1>
       <Busqueda onFiltrar={filtrarAtracciones} />
+      <div>
+  <label htmlFor="filterSelect">Filtrar por:</label>
+  <select id="filterSelect" value={Selectoption} onChange={(e) => setSelectoption(e.target.value)}>
+    <option value="">Todos</option>
+    <option value="argentina">argentina</option>
+    <option value="italia">italia</option>
+  </select>
+</div>
 
       <button className="cerrarsesion" onClick={cerrarsession}>cerrar sesión</button>
       <div className="botones-sup">
@@ -90,8 +113,8 @@ function Listado() {
         <Link to="/Login2">
           <button>login</button>
         </Link>
-        <Link to="/barrabuscadora">
-          <button>prueba de busqueda</button>
+        <Link to="/busquedaporvoz">
+          <button>prueba de busqueda por voz</button>
         </Link>
         </div>
       <div className="container-principal">

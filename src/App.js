@@ -7,6 +7,7 @@ import Listado from './components/main';
 import AtraccionDetalles from './components/atraccionDetalles';
 import EditarAtraccion from './components/Edit';
 import Busqueda from './components/barrabuscadora';
+import BusquedaporVoz from './components/busquedaporvoz'
 import Maps from "./components/maps";
 
 function App() {
@@ -21,6 +22,8 @@ function App() {
         <Route path="/Edit" element={<EditarAtraccion/>} />
         <Route path="/maps" element={<Maps/>} />
         <Route path="/barrabuscadora" element={<Busqueda/>} />
+        <Route path="/busquedaporvoz" element={<BusquedaporVoz/>} />
+
       </Routes>
     </Router>
   );

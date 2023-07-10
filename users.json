@@ -61,6 +61,7 @@
       "img": "https://plus.unsplash.com/premium_photo-1661962860425-373f38f8e6f4?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=435&q=80",
       "latitud": "41.9029",
       "longitud": "12.4534",
+      "pais": "italia",
       "id": 13
     },
     {
@@ -69,7 +70,17 @@
       "img": "https://images.unsplash.com/photo-1538703012804-b74999aa11b9?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=774&q=80",
       "latitud": "-25.6953",
       "longitud": "-54.4367",
+      "pais": "argentina",
       "id": 14
+    },
+    {
+      "name": "glaciar perito moreno",
+      "direccion": "santa cruz 011",
+      "img": "https://images.unsplash.com/photo-1577373482643-5c7ccf8f0ac9?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=870&q=80",
+      "latitud": "-50.4750",
+      "longitud": "-73.0347",
+      "pais": "argentina",
+      "id": 15
     }
   ],
   "comentarios": [
@@ -134,6 +145,18 @@
       "email": "pablosalazar@outlook.com",
       "atraccionId": "12",
       "id": 10
+    },
+    {
+      "comments": "lindas vista de las cataratas",
+      "email": "pablosalazar@outlook.com",
+      "atraccionId": "14",
+      "id": 11
+    },
+    {
+      "comments": "ire a verlo y de paso saludare al papa",
+      "email": "pablosalazar@outlook.com",
+      "atraccionId": "13",
+      "id": 12
     }
   ]
 }
