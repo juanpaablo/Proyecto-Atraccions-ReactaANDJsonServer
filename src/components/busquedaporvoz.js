@@ -1,13 +1,31 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 import SpeechRecognition, { useSpeechRecognition } from 'react-speech-recognition';
 
 const Dictaphone = () => {
+  const [busquedavoz, setBusquedavoz] = useState("");
+  const [transcript, setTranscript] = useState("");
+
+  const handleTranscriptChange = (e) => {
+    const value = e.target.value;
+    setBusquedavoz(value);
+  };
+
   const {
-    transcript,
     listening,
     resetTranscript,
-    browserSupportsSpeechRecognition
+    browserSupportsSpeechRecognition,
+    interimTranscript //esta es una variable
   } = useSpeechRecognition();
+
+  useEffect(() => {
+    if (interimTranscript) {
+      setTranscript(interimTranscript);
+      setBusquedavoz(interimTranscript)
+    }
+  }, [interimTranscript]);
+
+  console.log(transcript);
+  console.log(busquedavoz)
 
   if (!browserSupportsSpeechRecognition) {
     return <span>Browser doesn't support speech recognition.</span>;
@@ -19,8 +37,9 @@ const Dictaphone = () => {
       <button onClick={SpeechRecognition.startListening}>Start</button>
       <button onClick={SpeechRecognition.stopListening}>Stop</button>
       <button onClick={resetTranscript}>Reset</button>
-      <p>{transcript}</p>
+      <input className='input' value={transcript} name='transcript' onChange={handleTranscriptChange} />
     </div>
   );
 };
+
 export default Dictaphone;
