@@ -1,29 +1,32 @@
 import React, { useState, useEffect } from 'react';
 import SpeechRecognition, { useSpeechRecognition } from 'react-speech-recognition';
 
-const Dictaphone = () => {
+const Dictaphone = ({onfiltrar1}) => {
   const [busquedavoz, setBusquedavoz] = useState("");
   const [transcript, setTranscript] = useState("");
 
   const handleTranscriptChange = (e) => {
     const value = e.target.value;
     setBusquedavoz(value);
+    onfiltrar1(value)
+    
   };
 
   const {
     listening,
     resetTranscript,
     browserSupportsSpeechRecognition,
-    interimTranscript //esta es una variable
+    interimTranscript, //esta es una variable
   } = useSpeechRecognition();
 
   useEffect(() => {
     if (interimTranscript) {
       setTranscript(interimTranscript);
-      setBusquedavoz(interimTranscript)
+      setBusquedavoz(interimTranscript);
+      onfiltrar1(interimTranscript)
     }
-  }, [interimTranscript]);
-
+  }, [interimTranscript,onfiltrar1]);
+  
   console.log(transcript);
   console.log(busquedavoz)
 

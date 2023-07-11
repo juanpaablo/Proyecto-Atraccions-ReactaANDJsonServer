@@ -1,7 +1,8 @@
 import React, { useState, useEffect } from "react";
 import axios from "axios";
-import { Link, useNavigate } from "react-router-dom";
+import { Link, } from "react-router-dom";
 import Busqueda from "./barrabuscadora";
+import Dictaphone from "./busquedaporvoz";
 
 import "C:/Users/pablo/react/final-prog-01/src/styles/main.css";
 
@@ -12,6 +13,7 @@ function Listado() {
   const [Filteredlist, setFilteredlist]= useState([])
   const [List, setNewList] = useState([]);
   const [Selectoption, setSelectoption]= useState ("")
+  const [Filteredvoice, setFilteredvoice]= useState ("")
 
   const Getlist = async () => {
     try {
@@ -55,8 +57,18 @@ function Listado() {
     const resBusqueda = List.filter((atraccion) =>
       atraccion.name.toLowerCase().includes(termino.toLowerCase())
     );
-    setFilteredlist(resBusqueda);
+    setFilteredvoice(termino)
+    // Filtrar también por búsqueda por voz
+    const resBusquedaVoz = resBusqueda.filter((atraccion) =>
+      atraccion.name.toLowerCase().includes(Filteredvoice.toLowerCase())
+    );
+  
+    setFilteredlist(resBusquedaVoz);
   };
+  
+  const filtrarvoz= (e) => {
+    setFilteredvoice(e)
+  }
   
 //hago un ternario que dice que si filtered list captura algo que se muestre sino que se muestre todo
   const content = (Filteredlist.length > 0 ? Filteredlist : List).map((card) => (
@@ -90,6 +102,8 @@ function Listado() {
     <div>
       <h1>bienvenido {username}</h1>
       <Busqueda onFiltrar={filtrarAtracciones} />
+      <Dictaphone onfiltrar1={filtrarAtracciones} busquedaVoz={Filteredvoice} />
+
       <div>
   <label htmlFor="filterSelect">Filtrar por:</label>
   <select id="filterSelect" value={Selectoption} onChange={(e) => setSelectoption(e.target.value)}>
