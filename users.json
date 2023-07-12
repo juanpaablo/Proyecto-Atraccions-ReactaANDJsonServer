@@ -32,28 +32,28 @@
       "name": "coliseo romano europeo",
       "direccion": "roma 14",
       "img": "https://images.unsplash.com/photo-1582204545593-1356b96cab4b?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=435&q=80",
-      "latitud": "41.8902",
-      "longitud": "12.4922"
+      "pais": "italia"
     },
     {
       "id": 9,
       "name": "rueda de la fortuna",
       "direccion": "kentucki 271",
-      "img": "https://images.unsplash.com/photo-1587659901518-7020d4413085?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1074&q=80"
+      "img": "https://images.unsplash.com/photo-1587659901518-7020d4413085?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1074&q=80",
+      "pais": "estados unidos"
     },
     {
       "id": 10,
       "name": "iglesia clasica",
       "direccion": "dinamarca 285",
-      "img": "https://images.unsplash.com/photo-1579434502435-e54701d2533d?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=370&q=80"
+      "img": "https://images.unsplash.com/photo-1579434502435-e54701d2533d?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=370&q=80",
+      "pais": "dinamarca"
     },
     {
+      "id": 12,
       "name": "cristo redentor",
       "direccion": "rio de janeiro 911",
       "img": "https://images.unsplash.com/photo-1564659907532-6b5f98c8e70f?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=437&q=80",
-      "latitud": "-22.9519",
-      "longitud": "-43.2105",
-      "id": 12
+      "pais": "brazil"
     },
     {
       "name": "ciudad de vaticano",
@@ -63,15 +63,6 @@
       "longitud": "12.4534",
       "pais": "italia",
       "id": 13
-    },
-    {
-      "name": "cataratas del iguazu",
-      "direccion": "catara 923",
-      "img": "https://images.unsplash.com/photo-1538703012804-b74999aa11b9?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=774&q=80",
-      "latitud": "-25.6953",
-      "longitud": "-54.4367",
-      "pais": "argentina",
-      "id": 14
     },
     {
       "name": "glaciar perito moreno",
@@ -90,6 +81,15 @@
       "longitud": "31.1376",
       "pais": "egipto",
       "id": 16
+    },
+    {
+      "name": "cerros de los siete colores",
+      "direccion": "purmamarca 233",
+      "img": "https://images.unsplash.com/photo-1681300737781-af67ab65f2cc?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=774&q=80",
+      "latitud": "-23.2308",
+      "longitud": "-65.3112",
+      "pais": "argentina",
+      "id": 17
     }
   ],
   "comentarios": [
@@ -99,7 +99,6 @@
       "id": 1,
       "atraccionid": 1
     },
-    {},
     {
       "comments": "buena la atraccion",
       "email": "pablosalazar@outlook.com",

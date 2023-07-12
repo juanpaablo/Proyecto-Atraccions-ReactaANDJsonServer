@@ -12,7 +12,8 @@ function EditarAtraccion(){
         name:"",
         img:"",
         direccion:"",
-        id:""
+        id:"",
+        pais:""
     })
     useEffect(() => {
         Getlist().then((response) => {
@@ -26,7 +27,8 @@ function EditarAtraccion(){
             id:select.id,
             name:select.name,
             direccion:select.direccion,
-            img:select.img
+            img:select.img,
+            pais:select.pais
         })
         return console.log(select)
     }
@@ -59,6 +61,8 @@ function EditarAtraccion(){
     <label>imagen: </label>
     <input value={atraccion.img} type='text' name='img' id="img" onChange={handleChange}></input>
     <br></br>
+    <label>pais: </label>
+    <input value={atraccion.pais} type='text' name='pais' id="pais" onChange={handleChange}></input>
     <br></br>
     <br></br>
     <button type='submit'>EDIT</button>
