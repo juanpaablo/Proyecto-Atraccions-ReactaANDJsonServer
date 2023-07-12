@@ -57,7 +57,7 @@ function Listado() {
     const resBusqueda = List.filter((atraccion) =>
       atraccion.name.toLowerCase().includes(termino.toLowerCase())
     );
-    setFilteredvoice(termino)
+    
     // Filtrar también por búsqueda por voz
     const resBusquedaVoz = resBusqueda.filter((atraccion) =>
       atraccion.name.toLowerCase().includes(Filteredvoice.toLowerCase())
