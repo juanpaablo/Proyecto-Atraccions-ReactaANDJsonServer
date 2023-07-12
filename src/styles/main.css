@@ -21,7 +21,7 @@
 .direccions{
   text-align: center;
 }
-    .button {
+  .simple{
       background-color: #663399;
       color: #ffffff;
       font-size: 16px;
@@ -30,10 +30,25 @@
       cursor: pointer;;
       transition: background-color 0.3s ease;
     }
-  .button:hover {
+    .simple:hover {
     background-color: #512da8;
   }
   .botones-sup{
    display: flex;
    justify-content: center;
+  }
+  #microphone{
+    background-color: #663399;
+      color: #ffffff;
+      font-size: 16px;
+      padding: 0.5rem 1rem;
+      border: none;
+      cursor: pointer;;
+      transition: background-color 0.3s ease;
+  }
+  #microphone:hover{
+    background-color: #512da8;
+  }
+  .barrabuscaora2{
+    display: none;
   }

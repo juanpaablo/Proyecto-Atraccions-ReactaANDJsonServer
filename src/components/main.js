@@ -77,6 +77,7 @@ function Listado() {
       <img alt="notFOUND" width="100%" src={card.img}></img>
       <p className="direccions">{card.direccion}</p>
       <button
+      className="simple"
         onClick={(del) => {
           axios.delete(Url + '/' + card.id).then((response) => {
             if (response.status === 200) {
@@ -89,53 +90,53 @@ function Listado() {
         borrar
       </button>
       <Link to={`/atracciones/${card.id}`}>
-        <button>mostrar atracción</button>
+        <button className="simple">mostrar atracción</button>
       </Link>
       <Link to="/Edit">
-        <button>editar</button>
+        <button className="simple">editar</button>
       </Link>
       <br></br>
     </div>
   ));
 
   return (
-    <div>
+    <section id="barrabuscadora">
       <h1>bienvenido {username}</h1>
       <Busqueda onFiltrar={filtrarAtracciones} />
-      <Dictaphone onfiltrar1={filtrarAtracciones} busquedaVoz={Filteredvoice} />
+      <Dictaphone  onfiltrar1={filtrarAtracciones} busquedaVoz={Filteredvoice} />
 
-      <div>
+      <section>
   <label htmlFor="filterSelect">Filtrar por:</label>
   <select id="filterSelect" value={Selectoption} onChange={(e) => setSelectoption(e.target.value)}>
     <option value="">Todos</option>
     <option value="argentina">argentina</option>
     <option value="italia">italia</option>
   </select>
-</div>
+</section>
 
-      <button className="cerrarsesion" onClick={cerrarsession}>cerrar sesión</button>
+      <button  className="simple" onClick={cerrarsession}>cerrar sesión</button>
       <div className="botones-sup">
 
       
       
       <Link to="/atraccion">
-          <button>agregar atracción</button>
+          <button className="simple">agregar atracción</button>
         </Link>
         <Link to="/Register">
-          <button>registrar usuarios</button>
+          <button className="simple">registrar usuarios</button>
         </Link>
         <Link to="/Login2">
-          <button>login</button>
+          <button className="simple" >login</button>
         </Link>
         <Link to="/busquedaporvoz">
-          <button>prueba de busqueda por voz</button>
+          <button className="simple" >prueba de busqueda por voz</button>
         </Link>
         </div>
       <div className="container-principal">
         
         {content}
       </div>
-    </div>
+    </section>
   );
 }
 

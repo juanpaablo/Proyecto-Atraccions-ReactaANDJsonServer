@@ -1,5 +1,5 @@
 import React, { useState, useRef } from "react";
-
+import "../styles/barrabuscadora.css"
 
 function Busqueda({onFiltrar}) {
   const contadoref = useRef(null);
@@ -24,7 +24,7 @@ function Busqueda({onFiltrar}) {
   return (
     <div className="search-container">
       <input 
-      
+        
         type="text"
         className="form-control"
         placeholder="Buscar lugares"

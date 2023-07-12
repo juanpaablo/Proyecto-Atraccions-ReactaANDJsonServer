@@ -1,8 +1,13 @@
-.container {
-    background-color: #f2e6ff;
-    padding: 20px;
-    border-radius: 5px;
-  }
+.container-principal{
+  border: 1px solid black;
+  display: flex;
+  flex-flow:row wrap ;
+  justify-content: center;
+  align-content: center;
+}
+.name-atraccion{
+  text-align: center;
+}
   
   h1 {
     color: #800080;
@@ -12,12 +17,14 @@
     color: #800080;
   }
   
-  img {
+  .detalles-img {
     display: block;
-    max-width: 100%;
+    max-width: 50%;
     height: auto;
     margin-bottom: 20px;
   }
+  
+
   
   .map-container {
     position: relative;
@@ -42,19 +49,7 @@
     border: 1px solid #800080;
   }
   
-  button {
-    background-color: #663399;
-    color: #ffffff;
-    font-size: 16px;
-    padding: 0.5rem 1rem;
-    border: none;
-    cursor: pointer;;
-    transition: background-color 0.3s ease;
-  }
-  
-  button:hover {
-    background-color: #512da8;
-  }
+ 
   
   a {
     color: #800080;

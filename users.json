@@ -81,6 +81,15 @@
       "longitud": "-73.0347",
       "pais": "argentina",
       "id": 15
+    },
+    {
+      "name": "esfinge de giza",
+      "direccion": "giza 122",
+      "img": "https://images.unsplash.com/photo-1669301038557-f84309ac1269?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NXx8cGlyYW1pZGUlMjBkZSUyMGdpemF8ZW58MHx8MHx8fDA%3D&auto=format&fit=crop&w=500&q=60",
+      "latitud": "29.9753",
+      "longitud": "31.1376",
+      "pais": "egipto",
+      "id": 16
     }
   ],
   "comentarios": [

@@ -3,6 +3,7 @@ import { Link, useParams } from "react-router-dom";
 import { GoogleMap, useJsApiLoader } from "@react-google-maps/api";
 import axios from "axios";
 import Mapeado from "./maps";
+import {IoChevronBackSharp} from 'react-icons/io5'
 import "../styles/atracciondetalles.css"
 
 const AtraccionDetalles = () => {
@@ -95,13 +96,13 @@ const AtraccionDetalles = () => {
   ));
 
   return (
-    <div>
+    <div className="container-principal">
       {detalles ? (
-        <div>
+        <div >
           <h1>Detalles de la atracción: {detalles.name}</h1>
-          <h2>{detalles.name}</h2>
-          <img src={detalles.img} alt="Imagen de la atracción" />
-          <p>{detalles.direccion}</p>
+          <h2 className="name-atraccion">{detalles.name}</h2>
+          <img className="detalles-img" src={detalles.img} alt="Imagen de la atracción" />
+          <p className="name-atraccion" >{detalles.direccion}</p>
           <Mapeado center={coordenadas}  />
           {showInput && coordenadas && (
             <div className="container">
@@ -112,15 +113,17 @@ const AtraccionDetalles = () => {
                   name="comments"
                 />
                 <button type="submit">Agregar Comentario</button>
+
               </form>
               {commentContent}
             </div>
+            
           )}
         </div>
       ) : (
         <p>Cargando detalles...</p>
       )}
-      <Link to="/">Volver a la lista de atracciones</Link>
+      <Link to="/"> <IoChevronBackSharp/> </Link>
     </div>
   );
 };

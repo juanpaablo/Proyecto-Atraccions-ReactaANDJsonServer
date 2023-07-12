@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import SpeechRecognition, { useSpeechRecognition } from 'react-speech-recognition';
+import {BiMicrophone} from 'react-icons/bi'
 
 const Dictaphone = ({onfiltrar1}) => {
   const [busquedavoz, setBusquedavoz] = useState("");
@@ -37,12 +38,11 @@ const Dictaphone = ({onfiltrar1}) => {
   return (
     <div>
       <p>Microphone: {listening ? 'on' : 'off'}</p>
-      <button onClick={SpeechRecognition.startListening}>Start</button>
-      <button onClick={SpeechRecognition.stopListening}>Stop</button>
-      <button onClick={resetTranscript}>Reset</button>
-      <input className='input' value={transcript} name='transcript' onChange={handleTranscriptChange} />
+      <button id='microphone' onClick={SpeechRecognition.startListening}> <BiMicrophone/></button>
+      <input className='input'  value={transcript} name='transcript' onChange={handleTranscriptChange} />
     </div>
   );
 };
 
 export default Dictaphone;
+
