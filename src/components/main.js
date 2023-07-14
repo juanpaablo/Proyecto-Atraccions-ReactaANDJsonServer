@@ -144,8 +144,8 @@ function Listado() {
         <Link to="/Login2">
           <button className="simple">login</button>
         </Link>
-        <Link to="/busquedaporvoz">
-          <button className="simple">prueba de busqueda por voz</button>
+        <Link to="/carrusel">
+          <button className="simple">prueba de carrusel</button>
         </Link>
       </div>
       <div className="container-principal">{content}</div>

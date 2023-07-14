@@ -1,4 +1,5 @@
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
+import { ReactDOM } from 'react';
 //import Login from './components/login';
 import Register from './components/register';
 import Login2 from './components/Login2';
@@ -9,9 +10,10 @@ import EditarAtraccion from './components/Edit';
 import Busqueda from './components/barrabuscadora';
 import BusquedaporVoz from './components/busquedaporvoz'
 import Maps from "./components/maps";
-
+import DemoCarousel from './components/carrusel';
 function App() {
   return (
+    
     <Router>
       <Routes>
         <Route path="/" element={<Listado />} />
@@ -23,10 +25,13 @@ function App() {
         <Route path="/maps" element={<Maps/>} />
         <Route path="/barrabuscadora" element={<Busqueda/>} />
         <Route path="/busquedaporvoz" element={<BusquedaporVoz/>} />
+        <Route path="/carrusel" element={<DemoCarousel/>} />
 
       </Routes>
     </Router>
+    
   );
+  
 }
 
 export default App;
