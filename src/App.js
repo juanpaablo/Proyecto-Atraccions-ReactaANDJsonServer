@@ -10,10 +10,14 @@ import EditarAtraccion from './components/Edit';
 import Busqueda from './components/barrabuscadora';
 import BusquedaporVoz from './components/busquedaporvoz'
 import Maps from "./components/maps";
-import DemoCarousel from './components/carrusel';
+import Carrusel from './components/carrusel';
 function App() {
+  const imagenesprueba = [
+    "https://picsum.photos/201/300",
+    "https://picsum.photos/200/300",
+    "https://picsum.photos/203/300"
+  ]
   return (
-    
     <Router>
       <Routes>
         <Route path="/" element={<Listado />} />
@@ -25,7 +29,7 @@ function App() {
         <Route path="/maps" element={<Maps/>} />
         <Route path="/barrabuscadora" element={<Busqueda/>} />
         <Route path="/busquedaporvoz" element={<BusquedaporVoz/>} />
-        <Route path="/carrusel" element={<DemoCarousel/>} />
+        <Route path="/carrusel" element={<Carrusel imagenes={imagenesprueba}/>} />
 
       </Routes>
     </Router>
