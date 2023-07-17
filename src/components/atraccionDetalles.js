@@ -4,6 +4,7 @@ import { GoogleMap, useJsApiLoader } from "@react-google-maps/api";
 import axios from "axios";
 import Mapeado from "./maps";
 import {IoChevronBackSharp} from 'react-icons/io5'
+import Carrusel from "./carrusel";
 import "../styles/atracciondetalles.css"
 
 const AtraccionDetalles = () => {
@@ -16,9 +17,14 @@ const AtraccionDetalles = () => {
     comments: ""
   });
   const [coordenadas, setcoordenadas]= useState(null)
+  const [imagenestest, setimagenestest] = useState(null)
+  const [imagenestest1, setimagenestest1] = useState(null)
+  const [imagenestest2, setimagenestest2] = useState(null)
 
   const bd = "http://localhost:3005/comentarios";
   const Url = "http://localhost:3005/comentarios";
+  
+
 //esta funcion sirve para traer los comentarios especificos de cada atraccion
   const getComentarios = async () => {
     const response = await axios.get(`${bd}?atraccionId=${id}`);
@@ -75,7 +81,17 @@ const AtraccionDetalles = () => {
         const response = await axios.get(url);
         setDetalles(response.data);
         const lat = parseFloat(response.data.latitud);
-      const lng = parseFloat(response.data.longitud);
+        const lng = parseFloat(response.data.longitud);
+
+      //hace la peticion para obtener de la tabla images en la bd las imagenes restantes
+      const imagenesResponse = await axios.get(`http://localhost:3005/images?atraccionid=${id}`);
+      const imagenes = imagenesResponse.data[0];
+      //conviete un objeto a array para que se manejable
+      const imagenesArray = Object.values(imagenes).slice(1);
+      setimagenestest(imagenesArray);
+      setimagenestest1(imagenesArray[1])
+      setimagenestest2(imagenesArray[2])
+
       setcoordenadas({ lat, lng });
       } catch (error) {
         console.error("Error al obtener los detalles de la atracción:", error);
@@ -88,6 +104,14 @@ const AtraccionDetalles = () => {
   useEffect(() => {
     esconderInput();
   }, []);
+  console.log(detalles)
+  console.log(imagenestest)
+  console.log(coordenadas)
+  const imagenesprueba = [
+    imagenestest,
+    imagenestest1,
+    imagenestest2
+  ]
 
   const commentContent = comentarios.map((comment) => (
     <div key={comment.id}>
@@ -102,6 +126,7 @@ const AtraccionDetalles = () => {
           <h1>Detalles de la atracción: {detalles.name}</h1>
           <h2 className="name-atraccion">{detalles.name}</h2>
           <img className="detalles-img" src={detalles.img} alt="Imagen de la atracción" />
+          <Carrusel imagenes={imagenesprueba} />
           <p className="name-atraccion" >{detalles.direccion}</p>
           <Mapeado center={coordenadas}  />
           {showInput && coordenadas && (

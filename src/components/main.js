@@ -97,9 +97,6 @@ function Listado() {
       <Link to={`/atracciones/${card.id}`}>
         <button className="simple">mostrar atracción</button>
       </Link>
-      <Link to={`/carrusel/${card.id}`}>
-        <button className="simple">mostrar atracción en carrusel</button>
-      </Link>
       <Link to="/Edit">
         <button className="simple">editar</button>
       </Link>

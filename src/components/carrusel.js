@@ -5,7 +5,8 @@ import { useSearchParams } from "react-router-dom";
 
 function Carrusel({ imagenes }) { 
   const [ImagenActual, setImagenActual] = useState(0);
-  const cantidad = imagenes?.length;
+  const cantidad = Array.isArray(imagenes) && imagenes.length > 0 ? imagenes.length : 0;
+
 
   if (!Array.isArray(imagenes) || cantidad === 0) {
     return <div>No hay imágenes disponibles.</div>;

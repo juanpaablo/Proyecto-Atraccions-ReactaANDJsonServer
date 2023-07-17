@@ -29,7 +29,6 @@ function App() {
         <Route path="/maps" element={<Maps/>} />
         <Route path="/barrabuscadora" element={<Busqueda/>} />
         <Route path="/busquedaporvoz" element={<BusquedaporVoz/>} />
-        <Route path="/carrusel" element={<Carrusel imagenes={imagenesprueba}/>} />
 
       </Routes>
     </Router>
