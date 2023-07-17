@@ -1,15 +1,30 @@
-.container{
+.container-carrusel{
     display: flex;
     justify-content: center;
     align-items: center;
     flex-direction: row;
+    width: 100%;
+    height: 50%;
 }
-.slide{
-    max-width: 100%;
-    height: auto;
+.slide-transition {
+    transition: opacity 0.5s ease-in-out;
+  }
+  
+  .slide {
     opacity: 0;
-    transition: opacity 0,5 ease-in-out;
-}
-.slide:active{
+  }
+  
+  .active {
     opacity: 1;
+  }
+.img-carrusel{
+  width: 70%;
+  height: 50%;
+}
+
+.slide.active.slide-transition {
+  display: flex;
+    align-content: center;
+    align-items: center;
+    justify-content: center;
 }

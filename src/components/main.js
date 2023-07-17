@@ -81,6 +81,7 @@ function Listado() {
       <h3>{card.name}</h3>
       <img alt="notFOUND" width="100%" src={card.img}></img>
       <p className="direccions">{card.direccion}</p>
+      <div className="botones-atraccions">
       <button
         className="simple"
         onClick={(del) => {
@@ -101,6 +102,7 @@ function Listado() {
         <button className="simple">editar</button>
       </Link>
       <br></br>
+      </div>
     </div>
   ));
 
@@ -143,9 +145,6 @@ function Listado() {
         </Link>
         <Link to="/Login2">
           <button className="simple">login</button>
-        </Link>
-        <Link to="/carrusel">
-          <button className="simple">prueba de carrusel</button>
         </Link>
       </div>
       <div className="container-principal">{content}</div>

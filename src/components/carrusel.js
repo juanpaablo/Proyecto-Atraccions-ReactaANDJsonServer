@@ -20,17 +20,25 @@ function Carrusel({ imagenes }) {
     setImagenActual((prevImagenActual) => (prevImagenActual - 1 + cantidad) % cantidad);
   };
 console.log(ImagenActual)
-  return (
-    <div className="container">
-      <button onClick={anteriorimagen}>atras</button>
-      {imagenes.map((imagen, index) => (
-        <div className={ImagenActual === index ? `${Carrusel.slide} ${Carrusel.active}` : Carrusel.slide} key={index}>
-          {ImagenActual === index && <img src={imagen} alt="imagen actual" />}
-        </div>
-      ))}
-      <button onClick={siguienteimagen}>adelante</button>
-    </div>
-  );
+return (
+  <div className="container-carrusel">
+    <button className="simple" onClick={anteriorimagen}>←</button>
+    {imagenes.map((imagen, index) => (
+      <div
+      
+        className={`slide ${ImagenActual === index ? 'active slide-transition' : ''}`}
+        key={index}
+      >
+        {ImagenActual === index && <img className="img-carrusel" src={imagen} alt="imagen actual" />}
+        
+      </div>
+    ))}
+    <button className="simple" onClick={siguienteimagen}>→</button>
+    
+  </div>
+);
+
+
 }
 
 export default Carrusel;

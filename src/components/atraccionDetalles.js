@@ -125,7 +125,6 @@ const AtraccionDetalles = () => {
         <div >
           <h1>Detalles de la atracción: {detalles.name}</h1>
           <h2 className="name-atraccion">{detalles.name}</h2>
-          <img className="detalles-img" src={detalles.img} alt="Imagen de la atracción" />
           <Carrusel imagenes={imagenesprueba} />
           <p className="name-atraccion" >{detalles.direccion}</p>
           <Mapeado center={coordenadas}  />
