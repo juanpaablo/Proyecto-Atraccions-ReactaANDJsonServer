@@ -20,11 +20,29 @@ const AtraccionDetalles = () => {
   const [imagenestest, setimagenestest] = useState(null)
   const [imagenestest1, setimagenestest1] = useState(null)
   const [imagenestest2, setimagenestest2] = useState(null)
-
+  const [statusimage, setstatusimage]= useState(false)
+  const [newImage, setnewImage]= useState ({
+    img1:"",
+    img2:"",
+    img3:""
+  })
   const bd = "http://localhost:3005/comentarios";
   const Url = "http://localhost:3005/comentarios";
+  const imagesurl= "http://localhost:3005/images"
   
-
+  const addimage = async (e) =>{
+  const response = await axios.post(imagesurl,newImage)
+  console.log(response);
+if(response.status === 201){
+    alert( " se agrego correctamente la imagen ")
+} else{
+  }}
+const handleChangeimage = (e) =>{
+  setnewImage({...newImage, [e.target.name]: e.target.value})
+}
+const togleuseimage = () =>{
+  setstatusimage(!statusimage)
+}
 //esta funcion sirve para traer los comentarios especificos de cada atraccion
   const getComentarios = async () => {
     const response = await axios.get(`${bd}?atraccionId=${id}`);
@@ -120,7 +138,19 @@ const AtraccionDetalles = () => {
   ));
 
   return (
+  
     <div className="container-principal">
+      <div className="barra-sup" >
+      {statusimage ? (
+        <div>
+        <input value={newImage.img1} onChange={handleChangeimage}/>
+      <input value={newImage.img2} onChange={handleChangeimage}/>
+      <input value={newImage.img3} onChange={handleChangeimage}/>
+        </div>
+      ) : (
+        <button className="simple" onClick={togleuseimage} >agregar imagenes</button>
+      )}
+      </div>
       {detalles ? (
         <div >
           <h1>Detalles de la atracción: {detalles.name}</h1>
