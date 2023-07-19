@@ -24,13 +24,19 @@ const AtraccionDetalles = () => {
   const [newImage, setnewImage]= useState ({
     img1:"",
     img2:"",
-    img3:""
+    img3:"",
+    atraccionid:id
   })
   const bd = "http://localhost:3005/comentarios";
   const Url = "http://localhost:3005/comentarios";
-  const imagesurl= "http://localhost:3005/images"
-  
+  const imagesurl= `http://localhost:3005/images`
   const addimage = async (e) =>{
+    e.preventDefault()
+    // Verificar si los campos de imágenes están vacíos
+  if (newImage.img1 === "" || newImage.img2 === "" || newImage.img3 === "") {
+    alert("Por favor, complete todos los campos de imágenes.");
+    return;
+  }
   const response = await axios.post(imagesurl,newImage)
   console.log(response);
 if(response.status === 201){
@@ -105,7 +111,7 @@ const togleuseimage = () =>{
       const imagenesResponse = await axios.get(`http://localhost:3005/images?atraccionid=${id}`);
       const imagenes = imagenesResponse.data[0];
       //conviete un objeto a array para que se manejable
-      const imagenesArray = Object.values(imagenes).slice(1);
+      const imagenesArray = Object.values(imagenes).slice(0);
       setimagenestest(imagenesArray);
       setimagenestest1(imagenesArray[1])
       setimagenestest2(imagenesArray[2])
@@ -142,11 +148,15 @@ const togleuseimage = () =>{
     <div className="container-principal">
       <div className="barra-sup" >
       {statusimage ? (
-        <div>
-        <input value={newImage.img1} onChange={handleChangeimage}/>
-      <input value={newImage.img2} onChange={handleChangeimage}/>
-      <input value={newImage.img3} onChange={handleChangeimage}/>
+        <form onSubmit={addimage} >
+        <div className="botones-sup">
+
+          <button type="submit" className="simple" onChange={handleChangeimage}  >agregar imagenes</button>
+        <input name="img1" type="text" value={newImage.img1} onChange={handleChangeimage}/>
+      <input name="img2" type="text" value={newImage.img2} onChange={handleChangeimage}/>
+      <input name="img3" type="text" value={newImage.img3} onChange={handleChangeimage}/>
         </div>
+        </form>
       ) : (
         <button className="simple" onClick={togleuseimage} >agregar imagenes</button>
       )}
