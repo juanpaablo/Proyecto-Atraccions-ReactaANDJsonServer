@@ -22,8 +22,8 @@ function Mapeado({center}) {
     map.fitBounds(bounds);
 
     setMap(map);
-  }, []);
-
+  }, [center]);
+console.log(map)
   const onUnmount = React.useCallback(function callback(map) {
     setMap(null);
   }, []);

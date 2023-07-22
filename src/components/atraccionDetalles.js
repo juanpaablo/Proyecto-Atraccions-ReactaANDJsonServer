@@ -58,7 +58,7 @@ const togleuseimage = () =>{
     getComentarios().then((data) => {
       setComentarios(data);
     });
-  },);
+  },[getComentarios]);
 //con esta funcion guardare los datos que obtengo del input
   const handleChange = (e) => {
     setCommentsActuales({

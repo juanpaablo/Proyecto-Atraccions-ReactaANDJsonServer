@@ -15,7 +15,6 @@ const Dictaphone = ({onfiltrar1}) => {
 
   const {
     listening,
-    resetTranscript,
     browserSupportsSpeechRecognition,
     interimTranscript, //esta es una variable
   } = useSpeechRecognition();

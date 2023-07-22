@@ -74,7 +74,7 @@ function Listado() {
   const togleusevoice = () => {
     setUsevoice(!Usevoice);
   };
-
+console.log(filtrarvoz)
   const content = (Filteredlist.length > 0 ? Filteredlist : List).map((card) => (
     <div className="card" key={card.id}>
       <h3>{card.name}</h3>
