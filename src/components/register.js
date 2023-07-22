@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import axios from "axios";
 import { useNavigate, Link,useLocation } from 'react-router-dom';
-import "C:/Users/pablo/react/final-prog-01/src/styles/register.css"
+import "../styles/register.css"
 //esta funcion se encargara de setear cada nuevo registro que pondremos
 function Register() {
   const Url = "http://localhost:3005/users";
