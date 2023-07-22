@@ -1,7 +1,6 @@
 import React, { useState } from "react";
 import axios from "axios";
-import { useNavigate, Link } from 'react-router-dom';
-import Register from "./register";
+import { Link } from 'react-router-dom';
 
 function Login2() {
     //almacenare la database en una variable llamada url

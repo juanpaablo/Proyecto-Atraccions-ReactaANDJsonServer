@@ -1,6 +1,5 @@
 import React, { useEffect, useState } from "react";
 import { Link, useParams } from "react-router-dom";
-import { GoogleMap, useJsApiLoader } from "@react-google-maps/api";
 import axios from "axios";
 import Mapeado from "./maps";
 import {IoChevronBackSharp} from 'react-icons/io5'
@@ -59,7 +58,7 @@ const togleuseimage = () =>{
     getComentarios().then((data) => {
       setComentarios(data);
     });
-  }, [id]);
+  },);
 //con esta funcion guardare los datos que obtengo del input
   const handleChange = (e) => {
     setCommentsActuales({

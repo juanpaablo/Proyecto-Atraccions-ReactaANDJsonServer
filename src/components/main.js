@@ -3,7 +3,6 @@ import axios from "axios";
 import { Link } from "react-router-dom";
 import Busqueda from "./barrabuscadora";
 import Dictaphone from "./busquedaporvoz";
-import { BiMicrophone } from "react-icons/bi";
 
 import "../styles/main.css"
 
