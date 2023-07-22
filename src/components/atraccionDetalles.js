@@ -29,6 +29,13 @@ const AtraccionDetalles = () => {
   const bd = "http://localhost:3005/comentarios";
   const Url = "http://localhost:3005/comentarios";
   const imagesurl= `http://localhost:3005/images`
+  const Resetform = () =>{
+    setnewImage({
+      img1:"",
+      img2:"",
+      img3:""
+    })
+  }
   const addimage = async (e) =>{
     e.preventDefault()
     // Verificar si los campos de imágenes están vacíos
@@ -40,7 +47,11 @@ const AtraccionDetalles = () => {
   console.log(response);
 if(response.status === 201){
     alert( " se agrego correctamente la imagen ")
+    Resetform()
 } else{
+  alert("error al cargar las imagenes, intente nuevamente")
+  Resetform()
+  window.location.reload()
   }}
 const handleChangeimage = (e) =>{
   setnewImage({...newImage, [e.target.name]: e.target.value})
