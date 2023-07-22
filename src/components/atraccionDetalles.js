@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import React, { useEffect, useState, useCallback } from "react";
 import { Link, useParams } from "react-router-dom";
 import axios from "axios";
 import Mapeado from "./maps";
@@ -49,16 +49,22 @@ const togleuseimage = () =>{
   setstatusimage(!statusimage)
 }
 //esta funcion sirve para traer los comentarios especificos de cada atraccion
-  const getComentarios = async () => {
-    const response = await axios.get(`${bd}?atraccionId=${id}`);
-    return response.data;
-  };
-//con este usseefect almacenare los datos obtenidos en getcomentarios en el state comentarios
+  const getComentarios = useCallback(async () => {
+    try {
+      const response = await axios.get(`${bd}?atraccionId=${id}`);
+      return response.data;
+    } catch (error) {
+      console.error('Error al obtener comentarios:', error);
+      return []; // Retorna un array vacío o un valor por defecto en caso de error
+    }
+  }, [bd, id]);
+  
   useEffect(() => {
     getComentarios().then((data) => {
       setComentarios(data);
     });
-  },[getComentarios]);
+  }, [getComentarios]);
+  
 //con esta funcion guardare los datos que obtengo del input
   const handleChange = (e) => {
     setCommentsActuales({
