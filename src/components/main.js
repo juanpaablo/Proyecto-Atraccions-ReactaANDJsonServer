@@ -5,7 +5,7 @@ import Busqueda from "./barrabuscadora";
 import Dictaphone from "./busquedaporvoz";
 import { BiMicrophone } from "react-icons/bi";
 
-import "C:/Users/pablo/react/final-prog-01/src/styles/main.css";
+import "../styles/main.css"
 
 function Listado() {
   const Url = "http://localhost:3005/atracciones";
