@@ -24,6 +24,13 @@
       "comments": "buenisimo el lugar",
       "email": "pablosalazar@outlook.com",
       "id": 4
+    },
+    {
+      "name": "juan",
+      "lastname": "salazar",
+      "dni": "44580735",
+      "email": "pablosalazar1@outlook.com",
+      "id": 5
     }
   ],
   "atracciones": [
@@ -191,6 +198,12 @@
       "email": "pablosalazar@outlook.com",
       "atraccionId": "13",
       "id": 16
+    },
+    {
+      "comments": "muy bueno",
+      "email": "pablosalazar1@outlook.com",
+      "atraccionId": "10",
+      "id": 17
     }
   ],
   "images": [
