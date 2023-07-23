@@ -18,7 +18,8 @@
     "react-scripts": "5.0.1",
     "react-speech-recognition": "^3.10.0",
     "reactstrap": "^9.2.0",
-    "web-vitals": "^2.1.4"
+    "web-vitals": "^2.1.4",
+    "yarn": "^1.22.19"
   },
   "scripts": {
     "start": "react-scripts start",
@@ -26,7 +27,7 @@
     "test": "react-scripts test",
     "eject": "react-scripts eject",
     "start-server": "json-server --watch --p 3005 users.json",
-    "dev":"netlify dev"
+    "dev": "netlify dev"
   },
   "eslintConfig": {
     "extends": [
