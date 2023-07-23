@@ -131,8 +131,8 @@ const AtraccionDetalles = () => {
       </div>
       {detalles ? (
         <div >
-          <h1>Detalles de la atracción: {detalles.name}</h1>
-          <h2 className="name-atraccion">{detalles.name}</h2>
+          <h1 className="name-atraccion-h1">Detalles de la atracción: {detalles.name}</h1>
+          <h2 className="name-atraccion-h2">{detalles.name}</h2>
           <Carrusel imagenes={imagenesprueba} />
           <p className="name-atraccion" >{detalles.direccion}</p>
           <div  className="mapeado-conteiner">
@@ -146,7 +146,7 @@ const AtraccionDetalles = () => {
                   value={commentsActuales.comments}
                   name="comments"
                 />
-                <button type="submit">Agregar Comentario</button>
+                <button type="submit" className="simple" >Agregar Comentario</button>
 
               </form>
               {commentContent}

@@ -73,6 +73,7 @@ function Listado() {
   };
   const togleusevoice = () => {
     setUsevoice(!Usevoice);
+    setFilteredlist("")
   };
 console.log(filtrarvoz)
   const content = (Filteredlist.length > 0 ? Filteredlist : List).map((card) => (

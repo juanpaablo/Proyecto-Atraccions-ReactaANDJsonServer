@@ -29,6 +29,8 @@
       border: none;
       cursor: pointer;;
       transition: background-color 0.3s ease;
+      border-radius: .5em;
+      margin: 2px;
     }
     .simple:hover {
     background-color: #512da8;

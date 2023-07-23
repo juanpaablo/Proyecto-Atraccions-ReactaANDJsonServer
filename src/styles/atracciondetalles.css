@@ -6,7 +6,10 @@
   align-content: center;
   flex-direction: column;
 }
-.name-atraccion{
+.name-atraccion-h2{
+  text-align: center;
+}
+.name-atraccion-h1{
   text-align: center;
 }
   
@@ -58,3 +61,14 @@
     width: 100%;
     height: 100%;
   }
+  .container-comentarios {
+    display: flex;
+    align-content: flex-end;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    align-items: center;
+}
+p.name-atraccion {
+  align-content: center;
+  text-align: center;
+}

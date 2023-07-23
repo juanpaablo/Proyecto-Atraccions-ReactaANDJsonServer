@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import axios from "axios";
 import { Link } from 'react-router-dom';
-
+import "../styles/login.css"
 function Login2() {
     //almacenare la database en una variable llamada url
   const Url = "http://localhost:3005/users";
@@ -71,8 +71,12 @@ function Login2() {
             onChange={(e) => setDni(e.target.value)}
           />
         </div>
-        <button type="submit" className="button">Iniciar sesión</button>
+        <button type="submit" className="simple">Iniciar sesión</button>
+        <Link id="link-login" to="/" className="simple">
+          Main
+        </Link>
       </form>
+      
       <Link to="/Register" className="link"> Registrarse </Link>
     </div>
   );
