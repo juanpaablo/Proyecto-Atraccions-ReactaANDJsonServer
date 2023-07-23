@@ -25,7 +25,7 @@ function Busqueda({onFiltrar}) {
       <input 
         
         type="text"
-        className="form-control"
+        className="form-search"
         placeholder="Buscar lugares"
         onChange={handleChange}
         

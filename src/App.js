@@ -22,7 +22,6 @@ function App() {
         <Route path="/maps" element={<Maps/>} />
         <Route path="/barrabuscadora" element={<Busqueda/>} />
         <Route path="/busquedaporvoz" element={<BusquedaporVoz/>} />
-
       </Routes>
     </Router>
     

@@ -77,7 +77,7 @@ function Listado() {
 console.log(filtrarvoz)
   const content = (Filteredlist.length > 0 ? Filteredlist : List).map((card) => (
     <div className="card" key={card.id}>
-      <h3>{card.name}</h3>
+      <h3 className="texth3">{card.name}</h3>
       <img alt="notFOUND" width="100%" src={card.img}></img>
       <p className="direccions">{card.direccion}</p>
       <div className="botones-atraccions">

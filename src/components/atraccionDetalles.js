@@ -4,6 +4,7 @@ import axios from "axios";
 import Mapeado from "./maps";
 import {IoChevronBackSharp} from 'react-icons/io5'
 import Carrusel from "./carrusel";
+import Dropwdown from "./dropdow";
 import "../styles/atracciondetalles.css"
 
 const AtraccionDetalles = () => {
@@ -19,46 +20,8 @@ const AtraccionDetalles = () => {
   const [imagenestest, setimagenestest] = useState(null)
   const [imagenestest1, setimagenestest1] = useState(null)
   const [imagenestest2, setimagenestest2] = useState(null)
-  const [statusimage, setstatusimage]= useState(false)
-  const [newImage, setnewImage]= useState ({
-    img1:"",
-    img2:"",
-    img3:"",
-    atraccionid:id
-  })
   const bd = "http://localhost:3005/comentarios";
   const Url = "http://localhost:3005/comentarios";
-  const imagesurl= `http://localhost:3005/images`
-  const Resetform = () =>{
-    setnewImage({
-      img1:"",
-      img2:"",
-      img3:""
-    })
-  }
-  const addimage = async (e) =>{
-    e.preventDefault()
-    // Verificar si los campos de imágenes están vacíos
-  if (newImage.img1 === "" || newImage.img2 === "" || newImage.img3 === "") {
-    alert("Por favor, complete todos los campos de imágenes.");
-    return;
-  }
-  const response = await axios.post(imagesurl,newImage)
-  console.log(response);
-if(response.status === 201){
-    alert( " se agrego correctamente la imagen ")
-    Resetform()
-} else{
-  alert("error al cargar las imagenes, intente nuevamente")
-  Resetform()
-  window.location.reload()
-  }}
-const handleChangeimage = (e) =>{
-  setnewImage({...newImage, [e.target.name]: e.target.value})
-}
-const togleuseimage = () =>{
-  setstatusimage(!statusimage)
-}
 //esta funcion sirve para traer los comentarios especificos de cada atraccion
   const getComentarios = useCallback(async () => {
     try {
@@ -162,20 +125,9 @@ const togleuseimage = () =>{
   return (
   
     <div className="container-principal">
+      
       <div className="barra-sup" >
-      {statusimage ? (
-        <form onSubmit={addimage} >
-        <div className="botones-sup">
-
-          <button type="submit" className="simple" onChange={handleChangeimage}  >agregar imagenes</button>
-        <input name="img1" type="text" value={newImage.img1} onChange={handleChangeimage}/>
-      <input name="img2" type="text" value={newImage.img2} onChange={handleChangeimage}/>
-      <input name="img3" type="text" value={newImage.img3} onChange={handleChangeimage}/>
-        </div>
-        </form>
-      ) : (
-        <button className="simple" onClick={togleuseimage} >agregar imagenes</button>
-      )}
+        <Dropwdown></Dropwdown>
       </div>
       {detalles ? (
         <div >
@@ -183,9 +135,11 @@ const togleuseimage = () =>{
           <h2 className="name-atraccion">{detalles.name}</h2>
           <Carrusel imagenes={imagenesprueba} />
           <p className="name-atraccion" >{detalles.direccion}</p>
+          <div  className="mapeado-conteiner">
           <Mapeado center={coordenadas}  />
+          </div>
           {showInput && coordenadas && (
-            <div className="container">
+            <div className="container-comentarios">
               <form onSubmit={addComment}>
                 <input
                   onChange={handleChange}

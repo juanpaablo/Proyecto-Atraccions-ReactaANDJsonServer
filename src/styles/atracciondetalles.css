@@ -4,6 +4,7 @@
   flex-flow:row wrap ;
   justify-content: center;
   align-content: center;
+  flex-direction: column;
 }
 .name-atraccion{
   text-align: center;
@@ -26,11 +27,8 @@
   
 
   
-  .map-container {
-    position: relative;
-    height: 400px;
-    border-radius: 5px;
-    overflow: hidden;
+  .mapeado-conteiner{
+    flex-grow: 1;
   }
   
   .map {
