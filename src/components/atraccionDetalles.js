@@ -124,7 +124,7 @@ const AtraccionDetalles = () => {
 
   return (
   
-    <div className="container-principal">
+    <div className="container-principal-detalles">
       
       <div className="barra-sup" >
         <Dropwdown></Dropwdown>
