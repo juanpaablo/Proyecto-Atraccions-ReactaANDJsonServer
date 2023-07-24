@@ -9,6 +9,7 @@ import EditarAtraccion from './components/Edit';
 import Busqueda from './components/barrabuscadora';
 import BusquedaporVoz from './components/busquedaporvoz'
 import Maps from "./components/maps";
+import Dropdownlogin from './components/dropdowlogin';
 function App() {
   return (
     <Router>
@@ -22,6 +23,7 @@ function App() {
         <Route path="/maps" element={<Maps/>} />
         <Route path="/barrabuscadora" element={<Busqueda/>} />
         <Route path="/busquedaporvoz" element={<BusquedaporVoz/>} />
+        <Route path="/dropdowlogin" element={<Dropdownlogin/>} />
       </Routes>
     </Router>
     

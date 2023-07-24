@@ -146,6 +146,9 @@ console.log(filtrarvoz)
         <Link to="/Login2">
           <button className="simple">login</button>
         </Link>
+        <Link to="/dropdowlogin">
+          <button className="simple">prueba login</button>
+        </Link>
       </div>
       <div className="container-principal">{content}</div>
     </section>

@@ -31,6 +31,13 @@
       "dni": "44580735",
       "email": "pablosalazar1@outlook.com",
       "id": 5
+    },
+    {
+      "name": "juan",
+      "lastname": "salazar",
+      "dni": "3232323",
+      "email": "cel@gmail.com",
+      "id": 6
     }
   ],
   "atracciones": [
