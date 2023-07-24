@@ -3,12 +3,12 @@ import axios from "axios";
 import { Link } from "react-router-dom";
 import Busqueda from "./barrabuscadora";
 import Dictaphone from "./busquedaporvoz";
+import Dropdownlogin from "./dropdowlogin";
 
 import "../styles/main.css"
 
 function Listado() {
   const Url = "http://localhost:3005/atracciones";
-  let username = sessionStorage.emailusuario;
 
   const [Filteredlist, setFilteredlist] = useState([]);
   const [List, setNewList] = useState([]);
@@ -27,10 +27,6 @@ function Listado() {
     }
   };
 
-  const cerrarsession = () => {
-    sessionStorage.clear();
-    window.location.reload();
-  };
 
   useEffect(() => {
     Getlist().then((data) => {
@@ -108,7 +104,7 @@ console.log(filtrarvoz)
 
   return (
     <section id="barrabuscadora">
-      <h1>bienvenido {username}</h1>
+      <Dropdownlogin/>
       {Usevoice ? (
         <Dictaphone onfiltrar1={filtrarAtracciones} busquedaVoz={Filteredvoice} />
       ) : (
@@ -132,10 +128,6 @@ console.log(filtrarvoz)
           ))}
         </select>
       </section>
-
-      <button className="simple" onClick={cerrarsession}>
-        cerrar sesión
-      </button>
       <div className="botones-sup">
         <Link to="/atraccion">
           <button className="simple">agregar atracción</button>

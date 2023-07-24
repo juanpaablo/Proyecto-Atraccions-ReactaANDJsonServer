@@ -3,10 +3,12 @@ import "bootstrap/dist/css/bootstrap.min.css";
 import { Dropdown, DropdownItem, DropdownMenu, DropdownToggle } from "reactstrap";
 import axios from "axios";
 import "../styles/dropdown.css"
+import { Link } from "react-router-dom";
+import "../styles/dropdowlogin.css"
   function Dropdownlogin() {
   const [Dropdown1, setdropdown] = useState(false);
   const [dropdownInputFocused, setDropdownInputFocused] = useState(false); // Nuevo estado para rastrear el enfoque del campo de entrada
-
+  const [Usuario, setUsuario] = useState ('')
       //almacenare la database en una variable llamada url
     const Url = "http://localhost:3005/users";
     //creare states que usare
@@ -30,6 +32,7 @@ import "../styles/dropdown.css"
           resetEmail();
           resetDni();
           sessionStorage.setItem("emailusuario", email)
+          setUsuario(email)
         }
          else if (response.data.length >= 2) {
           alert("hay 2 usuarios iguales");
@@ -68,36 +71,59 @@ import "../styles/dropdown.css"
   const handleInputBlur = () => {
     setDropdownInputFocused(false);
   };
-
   return (
     <div className="app">
+      <form onSubmit={handleSubmit}>
       <Dropdown  isOpen={Dropdown1} toggle={abrircerrardropdown}>
         <DropdownToggle caret className="dropbtn" >Login</DropdownToggle>
         <DropdownMenu container="body">
-          <DropdownItem header>bienvenido usuario</DropdownItem>
+          <DropdownItem header>bienvenido {Usuario}</DropdownItem>
           <DropdownItem>
             <input
             onFocus={handleInputFocus}
             onBlur={handleInputBlur}
-              onSubmit={handleSubmit}
                 type="text"
-                className="input"
+                name="email"
                 placeholder="Email"
+                className="input-login"
                 value={email}
                 onChange={(e) => setEmail(e.target.value)}
             />
           </DropdownItem>
           <input
-          
+          onFocus={handleInputFocus}
+          onBlur={handleInputBlur}
+              type="text"
+              placeholder="dni"
+              className="input-login"
+              name="dni"
+              value={dni}
+              onChange={(e) => setDni(e.target.value)}
           />
-          <DropdownItem>
-            <button onClick={cerrarsession}>
-
-            </button>
+          <DropdownItem >
+            <button className="simple"
+             onClick={handleSubmit} 
+              type="submit"
+              name="submit"
+              onFocus={handleInputFocus}
+              onBlur={handleInputBlur}>
+                Iniciar sesion
+               </button>
+               <button 
+               className="simple"
+               onClick={cerrarsession}
+               onFocus={handleInputFocus}
+               onBlur={handleInputBlur}>
+                cerrar sesion
+               </button>
           </DropdownItem>
         </DropdownMenu>
       </Dropdown>
+      
+      </form>
     </div>
+    
+    
   );
 }
 
