@@ -4,6 +4,8 @@ import { Dropdown, DropdownItem, DropdownMenu, DropdownToggle } from "reactstrap
 import { useParams } from "react-router-dom";
 import axios from "axios";
 import "../styles/dropdown.css"
+import { ToastContainer, toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 
 function Dropwdown() {
   const [Dropdown1, setdropdown] = useState(false);
@@ -30,18 +32,19 @@ function Dropwdown() {
     e.preventDefault();
     // Verificar si los campos de imágenes están vacíos
     if (newImage.img1 === "" || newImage.img2 === "" || newImage.img3 === "") {
-      alert("Por favor, complete todos los campos de imágenes.");
+      toast.error("Por favor, complete todos los campos de imágenes.");
       return;
     }
     const response = await axios.post(imagesurl, newImage);
     console.log(response);
     if (response.status === 201) {
+      toast.success("se agrego la imagen correctamente")
       alert("Se agregó correctamente la imagen.");
       Resetform();
       window.location.reload()
       setdropdown(!Dropdown1)
     } else {
-      alert("Error al cargar las imágenes, inténtelo nuevamente.");
+      toast.error("Error al cargar las imágenes, inténtelo nuevamente.");
       Resetform();
       window.location.reload();
     }
@@ -111,6 +114,7 @@ function Dropwdown() {
           </DropdownItem>
         </DropdownMenu>
       </Dropdown>
+      <ToastContainer/>
     </div>
   );
 }

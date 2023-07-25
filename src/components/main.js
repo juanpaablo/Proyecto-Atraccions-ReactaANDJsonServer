@@ -4,7 +4,8 @@ import { Link } from "react-router-dom";
 import Busqueda from "./barrabuscadora";
 import Dictaphone from "./busquedaporvoz";
 import Dropdownlogin from "./dropdowlogin";
-
+import { ToastContainer, toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 import "../styles/main.css"
 
 function Listado() {
@@ -83,7 +84,7 @@ console.log(filtrarvoz)
         onClick={(del) => {
           axios.delete(Url + "/" + card.id).then((response) => {
             if (response.status === 200) {
-              alert(card.name + " se borró exitosamente");
+              toast.success(card.name + " se borró exitosamente");
               window.location.reload();
             }
           });
@@ -141,7 +142,7 @@ console.log(filtrarvoz)
           </Link>
         
         </section>
-        
+        <ToastContainer/>
         <div className="container-principal">{content}</div>
       
     </div>

@@ -4,6 +4,8 @@ import { Dropdown, DropdownItem, DropdownMenu, DropdownToggle } from "reactstrap
 import axios from "axios";
 import "../styles/dropdown.css"
 import "../styles/dropdowlogin.css"
+import { ToastContainer, toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
   function Dropdownlogin() {
   const [Dropdown1, setdropdown] = useState(false);
   const [dropdownInputFocused, setDropdownInputFocused] = useState(false); // Nuevo estado para rastrear el enfoque del campo de entrada
@@ -37,7 +39,8 @@ import "../styles/dropdowlogin.css"
           alert("hay 2 usuarios iguales");
         }
         else{
-          alert("credenciales invalidas")
+          toast.error('credenciales invalidas')
+         // alert("credenciales invalidas")
         }
       } catch (error) {
         console.error(error);
@@ -108,6 +111,7 @@ import "../styles/dropdowlogin.css"
               onBlur={handleInputBlur}>
                 Iniciar sesion
                </button>
+               
                <button 
                className="simple"
                onClick={cerrarsession}
@@ -118,7 +122,7 @@ import "../styles/dropdowlogin.css"
           </DropdownItem>
         </DropdownMenu>
       </Dropdown>
-      
+      <ToastContainer/>
       </form>
     </div>
     

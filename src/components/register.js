@@ -2,6 +2,8 @@ import React, { useState } from "react";
 import axios from "axios";
 import {  Link } from 'react-router-dom';
 import "../styles/register.css"
+import { ToastContainer, toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 //esta funcion se encargara de setear cada nuevo registro que pondremos
 function Register() {
   const Url = "http://localhost:3005/users";
@@ -24,6 +26,10 @@ function Register() {
 
   const addRegister = async (e) => {
     e.preventDefault(); //para que el navegador no se actualice con el sumbit
+    if (newRegister.name === "" || newRegister.lastname === "" || newRegister.dni === ""|| newRegister.email === "") {
+      toast.error("Por favor, complete todos los campos de imágenes.");
+      return;
+    }
     const response = await axios.post(Url, newRegister);
     console.log(response);
     if (response.status === 201) {
@@ -100,7 +106,7 @@ function Register() {
         <br/> <br/>
         
 
-        
+        <ToastContainer/>
       </form>
       <Link to="/atraccion"> <button className="simple"> agregar atracion</button> </Link>
     </div>

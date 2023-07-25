@@ -2,6 +2,8 @@ import React, { useState } from "react";
 import {Link} from "react-router-dom"
 import axios from "axios";
 import "../styles/atraccion.css"
+import { ToastContainer, toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 function Atraccion (){
  const url= "http://localhost:3005/atracciones"
  const [NewAtraccion, setNewAtraccion] = useState({
@@ -20,14 +22,18 @@ setNewAtraccion({
 })}
 const addAtraccion = async (e) =>{
     e.preventDefault();
+    if (NewAtraccion.name === "" || NewAtraccion.direccion === "" || NewAtraccion.img === ""|| NewAtraccion.pais === "") {
+      toast.error("Por favor, complete todos los campos de imágenes.");
+      return
+    }
 const response = await axios.post(url,NewAtraccion);
 console.log(response);
 if(response.status === 201){
-    alert(NewAtraccion.name + " se agrego correctamente ")
+    toast.success(NewAtraccion.name + " se agrego correctamente ")
     resetform()
 } else{
-    alert("error al crear una nueva atraccion")
-    alert("intente nuevamente mas tarde")
+    toast.error("error al crear una nueva atraccion")
+    toast.error("intente nuevamente mas tarde")
 }
 
 }
@@ -123,7 +129,7 @@ return (
         <br/> 
         
         
-
+        <ToastContainer/>
         <Link to="/"> <button className="simple" > ver las atrraciones registradas</button> </Link>
       </form>
 
