@@ -35,8 +35,8 @@ const Dictaphone = ({onfiltrar1}) => {
 
   return (
     <div>
-      <button id='microphone' onClick={SpeechRecognition.startListening}> <BiMicrophone/></button>
-      <input className='input'  value={transcript} name='transcript' onChange={handleTranscriptChange} />
+      <button id='microphone' className='simple' onClick={SpeechRecognition.startListening}> <BiMicrophone/></button>
+      <input className='form-search'  value={transcript} name='transcript' onChange={handleTranscriptChange} />
     </div>
   );
 };
