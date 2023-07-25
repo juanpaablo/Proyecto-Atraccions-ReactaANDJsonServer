@@ -1,0 +1,20 @@
+.container-atraccion {
+    display: flex;
+    align-items: center;
+    align-content: center;
+    justify-content: space-evenly;
+    flex-wrap: nowrap;
+    flex-direction: column;
+    margin: 40px;
+}
+.form-insert-atraccion {
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-content: center;
+    flex-wrap: nowrap;
+}
+.label-atraccion{
+    width: 75px;
+}

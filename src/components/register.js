@@ -48,9 +48,9 @@ function Register() {
 
   return (
     <div className="container">
-      <form onSubmit={addRegister}>
+      <form  className="form-insert-atraccion" onSubmit={addRegister}>
         <div className="form-group">
-          <label className="label"> Name: </label>
+          <label className="label-atraccion"> Name: </label>
           <input
             className="input"
             placeholder="Insert name"
@@ -62,7 +62,7 @@ function Register() {
           />
         </div>
         <div className="form-group">
-          <label className="label"> Last Name: </label>
+          <label className="label-atraccion"> Last Name: </label>
           <input
             className="input"
             placeholder="Insert last name"
@@ -73,7 +73,7 @@ function Register() {
           />
         </div>
         <div className="form-group">
-          <label className="label"> Email: </label>
+          <label className="label-atraccion"> Email: </label>
           <input
             className="input"
             placeholder="Insert email"
@@ -84,7 +84,7 @@ function Register() {
           />
         </div>
         <div className="form-group">
-          <label className="label"> Dni: </label>
+          <label className="label-atraccion"> Dni: </label>
           <input
             className="input"
             placeholder="Insert Dni"
@@ -102,9 +102,7 @@ function Register() {
 
         
       </form>
-
-      <Link to="/Login2"> <button> Login</button> </Link>
-      <Link to="/atraccion"> <button> agregar atracion</button> </Link>
+      <Link to="/atraccion"> <button className="simple"> agregar atracion</button> </Link>
     </div>
     
   );

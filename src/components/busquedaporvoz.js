@@ -14,7 +14,6 @@ const Dictaphone = ({onfiltrar1}) => {
   };
 
   const {
-    listening,
     browserSupportsSpeechRecognition,
     interimTranscript, //esta es una variable
   } = useSpeechRecognition();
@@ -36,7 +35,6 @@ const Dictaphone = ({onfiltrar1}) => {
 
   return (
     <div>
-      <p>Microphone: {listening ? 'on' : 'off'}</p>
       <button id='microphone' onClick={SpeechRecognition.startListening}> <BiMicrophone/></button>
       <input className='input'  value={transcript} name='transcript' onChange={handleTranscriptChange} />
     </div>

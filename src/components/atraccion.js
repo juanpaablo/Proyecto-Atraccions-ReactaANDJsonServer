@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import {Link} from "react-router-dom"
 import axios from "axios";
+import "../styles/atraccion.css"
 function Atraccion (){
  const url= "http://localhost:3005/atracciones"
  const [NewAtraccion, setNewAtraccion] = useState({
@@ -41,10 +42,10 @@ const resetform =() =>{
     })
 }
 return (
-    <div className="container">
-      <form onSubmit={addAtraccion}>
+    <div className="container-atraccion">
+      <form className="form-insert-atraccion" onSubmit={addAtraccion}>
         <div className="form-group">
-          <label className="label"> Name: </label>
+          <label className="label-atraccion"> Name: </label>
           <input
             className="input"
             placeholder="insert the name of the attraction"
@@ -56,7 +57,7 @@ return (
           />
         </div>
         <div className="form-group">
-          <label className="label"> direccion: </label>
+          <label className="label-atraccion"> direccion: </label>
           <input
             className="input"
             placeholder="Insert direccion"
@@ -67,7 +68,7 @@ return (
           />
         </div>
         <div className="form-group">
-          <label className="label"> image: </label>
+          <label className="label-atraccion"> image: </label>
           <input
             className="input"
             placeholder="insert image url"
@@ -79,7 +80,7 @@ return (
           />
         </div>
         <div className="form-group">
-          <label className="label"> latitud: </label>
+          <label className="label-atraccion"> latitud: </label>
           <input
             className="input"
             placeholder="insert latitud"
@@ -91,7 +92,7 @@ return (
           />
         </div>
         <div className="form-group">
-          <label className="label"> longitud: </label>
+          <label className="label-atraccion"> longitud: </label>
           <input
             className="input"
             placeholder="insert longitud"
@@ -103,7 +104,7 @@ return (
           />
         </div>
         <div className="form-group">
-          <label className="label"> pais: </label>
+          <label className="label-atraccion"> pais: </label>
           <input
             className="input"
             placeholder="insert el pais de la atraccion"
@@ -123,11 +124,10 @@ return (
         
         
 
-        
+        <Link to="/"> <button className="simple" > ver las atrraciones registradas</button> </Link>
       </form>
 
-      <Link to="/Login2"> <button> Login</button> </Link>
-      <Link to="/"> <button> ver las atrraciones registradas</button> </Link>
+      
       
     </div>
     

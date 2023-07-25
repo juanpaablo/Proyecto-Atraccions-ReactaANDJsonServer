@@ -68,7 +68,7 @@ function Dropwdown() {
   return (
     <div className="app">
       <Dropdown onSubmit={addimage} isOpen={Dropdown1} toggle={abrircerrardropdown}>
-        <DropdownToggle caret className="dropbtn" >Dropdown ejemplo01</DropdownToggle>
+        <DropdownToggle caret className="dropbtn" >Inserte imagenes!</DropdownToggle>
         <DropdownMenu container="body">
           <DropdownItem header>Inserte las imágenes</DropdownItem>
           <DropdownItem>

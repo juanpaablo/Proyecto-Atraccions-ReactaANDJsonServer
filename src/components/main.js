@@ -103,17 +103,19 @@ console.log(filtrarvoz)
   ));
 
   return (
-    <section id="barrabuscadora">
-      <Dropdownlogin/>
-      {Usevoice ? (
-        <Dictaphone onfiltrar1={filtrarAtracciones} busquedaVoz={Filteredvoice} />
-      ) : (
-        <Busqueda onFiltrar={filtrarAtracciones} />
-      )}
-      <button className="simple" onClick={togleusevoice}>
-        Voice
-      </button>
-      <section>
+    <div>
+      <section id="barra-superior">
+        <Dropdownlogin />
+        <div id="buscadores" >
+        {Usevoice ? (
+          <Dictaphone onfiltrar1={filtrarAtracciones} busquedaVoz={Filteredvoice} />
+        ) : (
+          <Busqueda onFiltrar={filtrarAtracciones} />
+        )}
+        <button className="simple" onClick={togleusevoice}>
+          Voice
+        </button>
+        </div>
         <label htmlFor="filterSelect">Filtrar por:</label>
         <select
           id="filterSelect"
@@ -128,16 +130,21 @@ console.log(filtrarvoz)
           ))}
         </select>
       </section>
-      <div className="botones-sup">
-        <Link to="/atraccion">
-          <button className="simple">agregar atracción</button>
-        </Link>
-        <Link to="/Register">
-          <button className="simple">registrar usuarios</button>
-        </Link>
-      </div>
-      <div className="container-principal">{content}</div>
-    </section>
+      
+      <section id="section-botones">
+        
+          <Link to="/atraccion">
+            <button className="simple">agregar atracción</button>
+          </Link>
+          <Link to="/Register">
+            <button className="simple">registrar usuarios</button>
+          </Link>
+        
+        </section>
+        
+        <div className="container-principal">{content}</div>
+      
+    </div>
   );
 }
 

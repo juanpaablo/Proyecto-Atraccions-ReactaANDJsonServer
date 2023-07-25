@@ -69,3 +69,27 @@
   color: var(--bs-heading-color);
   font-size: calc(0.7rem + .6vw);
 }
+section#barra-superior {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  align-content: center;
+  justify-content: flex-start;
+  align-items: baseline;
+}
+div#buscadores {
+  display: flex;
+  flex-direction: row;
+  align-content: center;
+  flex-wrap: nowrap;
+  justify-content: center;
+  align-items: baseline;
+  margin-left: 10px;
+    margin-right: 10px
+}
+section#section-botones {
+  display: flex;
+  align-items: center;
+  align-content: center;
+  justify-content: center;
+}
