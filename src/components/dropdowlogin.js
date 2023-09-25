@@ -29,7 +29,9 @@ import 'react-toastify/dist/ReactToastify.css';
         });
   //si la variable response obtiene los datos solicitados esta sera de valor 1 entonces signficara que existe este usuario y si es 0 significa que no existe
         if (response.data.length === 1  ) {
-          alert("Inicio de sesión correcto");
+          toast.success("Inicio de sesión correcto",{
+            position: toast.POSITION.TOP_CENTER
+          });
           resetEmail();
           resetDni();
           sessionStorage.setItem("emailusuario", email)
@@ -39,7 +41,10 @@ import 'react-toastify/dist/ReactToastify.css';
           alert("hay 2 usuarios iguales");
         }
         else{
-          toast.error('credenciales invalidas')
+          toast.warning('credenciales invalidas',{
+            theme:"colored",
+            position:toast.POSITION.TOP_CENTER
+          })
          // alert("credenciales invalidas")
         }
       } catch (error) {
@@ -57,6 +62,7 @@ import 'react-toastify/dist/ReactToastify.css';
   const cerrarsession = () => {
     sessionStorage.clear();
     window.location.reload();
+
   };
 
 

@@ -6,6 +6,8 @@ import {IoChevronBackSharp} from 'react-icons/io5'
 import Carrusel from "./carrusel";
 import Dropwdown from "./dropdow";
 import "../styles/atracciondetalles.css"
+import { toast } from "react-toastify";
+import 'react-toastify/dist/ReactToastify.css';
 
 const AtraccionDetalles = () => {
   const { id } = useParams();
@@ -55,13 +57,13 @@ const AtraccionDetalles = () => {
       atraccionId: id
     });
     if (response.status === 201) {
-      alert("Se agregó exitosamente el comentario");
+      toast.success("Se agregó exitosamente el comentario");
       clearForms();
       getComentarios().then((data) => {
         setComentarios(data);
       });
     } else {
-      alert("No se pudo agregar el comentario");
+      toast.error("error al agregar comentario")
     }
   };
 
