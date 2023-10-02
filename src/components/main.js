@@ -140,7 +140,9 @@ console.log(filtrarvoz)
           <Link to="/Register">
             <button className="simple">registrar usuarios</button>
           </Link>
-        
+          <Link to="/locales">
+        <button className="simple">agregar local</button>
+      </Link>
         </section>
         <ToastContainer/>
         <div className="container-principal">{content}</div>

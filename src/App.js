@@ -9,6 +9,7 @@ import Busqueda from './components/barrabuscadora';
 import BusquedaporVoz from './components/busquedaporvoz'
 import Maps from "./components/maps";
 import Dropdownlogin from './components/dropdowlogin';
+import Locales from './components/locales';
 function App() {
   return (
     <Router>
@@ -22,6 +23,7 @@ function App() {
         <Route path="/barrabuscadora" element={<Busqueda/>} />
         <Route path="/busquedaporvoz" element={<BusquedaporVoz/>} />
         <Route path="/dropdowlogin" element={<Dropdownlogin/>} />
+        <Route path="/locales" element={<Locales/>} />
       </Routes>
     </Router>
     
