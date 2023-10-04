@@ -1,9 +1,13 @@
 import React, { useEffect, useState } from "react";
 import axios from "axios";
+import { useParams } from "react-router-dom";
 
-function Localcarrusel() {
+function Localcarrusel({imagenlocal}) {
+  const {id} = useParams
   const [Filteredlist, setnewfilteredlist] = useState([]);
   const [list, setnewlist] = useState([]);
+  const [imagenestest, setimagenestest] = useState(null)
+  const [imagenestest1, setimagenestest1] = useState(null)
   const url = "http://localhost:3005/locales";
 
   const getlist = async () => {
@@ -20,15 +24,29 @@ function Localcarrusel() {
     getlist().then((data) => {
       setnewfilteredlist(data);
       setnewlist(data)
+      setimagenestest1(data.img)
     });
   }, []);
-
   useEffect(() => {
     if (Filteredlist.length > 0) {
-      const nombres = Filteredlist.map((item) => item.name);
-      console.log(nombres);
+      const images = Filteredlist.map((item) => item.img);
+      setimagenestest(images)
     }
   }, [Filteredlist]);
+  console.log(imagenestest)
+  const getDetalles = async () =>{
+    try {
+      //hace la peticion para obtener de la tabla images en la bd las imagenes restantes
+      const imagenesResponse = await axios.get(`http://localhost:3005/locales?atraccionid=${id}`);
+      const imagenes = imagenesResponse.data[2];
+      //conviete un objeto a array para que se manejable
+      const imagenesArray = Object.values(imagenes).slice(0);
+      setimagenestest(imagenesArray);
+      setimagenestest1(imagenesArray[3])
+    } catch (error) {
+      
+    }
+  }
 
   console.log(Filteredlist);
 
