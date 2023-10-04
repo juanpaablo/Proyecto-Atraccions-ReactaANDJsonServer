@@ -35,7 +35,7 @@ function Listado() {
       setFilteredlist(data);
     });
   }, []);
-
+  console.log(Filteredlist)
   useEffect(() => {
     const countries = new Set(List.map((atraccion) => atraccion.pais));
     setUniqueCountries(Array.from(countries));
@@ -142,6 +142,9 @@ console.log(filtrarvoz)
           </Link>
           <Link to="/locales">
         <button className="simple">agregar local</button>
+      </Link>
+      <Link to="/localescarrusel">
+        <button className="simple">mostrar local</button>
       </Link>
         </section>
         <ToastContainer/>

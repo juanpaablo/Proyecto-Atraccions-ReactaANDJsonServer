@@ -10,6 +10,7 @@ import BusquedaporVoz from './components/busquedaporvoz'
 import Maps from "./components/maps";
 import Dropdownlogin from './components/dropdowlogin';
 import Locales from './components/locales';
+import Localcarrusel from './components/localescarrusel'
 function App() {
   return (
     <Router>
@@ -24,6 +25,7 @@ function App() {
         <Route path="/busquedaporvoz" element={<BusquedaporVoz/>} />
         <Route path="/dropdowlogin" element={<Dropdownlogin/>} />
         <Route path="/locales" element={<Locales/>} />
+        <Route path="/localescarrusel" element={<Localcarrusel/>} />
       </Routes>
     </Router>
     
