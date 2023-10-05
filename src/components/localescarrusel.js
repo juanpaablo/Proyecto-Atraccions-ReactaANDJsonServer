@@ -2,7 +2,7 @@ import React, { useEffect, useState } from "react";
 import axios from "axios";
 import { useParams } from "react-router-dom";
 
-function Localcarrusel({imagenlocal}) {
+function Localcarrusel() {
   const {id} = useParams
   const [Filteredlist, setnewfilteredlist] = useState([]);
   const [list, setnewlist] = useState([]);

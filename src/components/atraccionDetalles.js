@@ -24,6 +24,7 @@ const AtraccionDetalles = () => {
   const [imagenestest2, setimagenestest2] = useState(null)
   const [imageneslocal, setimageneslocal] = useState(null)
   const [imageneslocal1, setimageneslocal1] = useState(null)
+  const [imageneslocal2, setimageneslocal2]= useState(null)
   const bd = "http://localhost:3005/comentarios";
   const Url = "http://localhost:3005/comentarios";
 //esta funcion sirve para traer los comentarios especificos de cada atraccion
@@ -92,20 +93,24 @@ const AtraccionDetalles = () => {
 
       //hace la peticion para obtener de la tabla images en la bd las imagenes restantes
       const imagenesResponse = await axios.get(`http://localhost:3005/images?atraccionid=${id}`);
-      const imagenesResponselocales = await axios.get(`http://localhost:3005/locales?atraccionid=${id}`);
+      const imagenesResponselocales = await axios.get(`http://localhost:3005/imageslocal?atraccionid=${id}`);
       const imagenes = imagenesResponse.data[0];
       const imageneslocal = imagenesResponselocales.data[0];
       //conviete un objeto a array para que se manejable
       const imagenesArray = Object.values(imagenes).slice(0);
-      const imagenesArraylocal = Object.values(imageneslocal).slice(4);
-      setimagenestest(imagenesArray);
-      setimagenestest1(imagenesArray[1])
-      setimagenestest2(imagenesArray[2])
-      
-      setimageneslocal(imagenesArraylocal);
-      setimageneslocal1(imagenesArraylocal[2])
+const imagenesArraylocal = Object.values(imageneslocal).slice(0);
+setimagenestest(imagenesArray);
+setimagenestest1(imagenesArray[1]);
+setimagenestest2(imagenesArray[2]);
+
+setimageneslocal(imagenesArraylocal);
+setimageneslocal1(imagenesArraylocal[1]);
+setimageneslocal2(imagenesArraylocal[2]);
 
       setcoordenadas({ lat, lng });
+      console.log("Respuesta de imagenesResponse:", imagenesResponse.data);
+console.log("Respuesta de imagenesResponselocales:", imagenesResponselocales.data);
+
       } catch (error) {
         console.error("Error al obtener los detalles de la atracción:", error);
       }
@@ -116,6 +121,7 @@ const AtraccionDetalles = () => {
   useEffect(() => {
     esconderInput();
   }, []);
+  
   console.log(imageneslocal)
   console.log(detalles)
   console.log(imagenestest)
@@ -125,9 +131,10 @@ const AtraccionDetalles = () => {
     imagenestest1,
     imagenestest2
   ]
-const imageneslocales= [
+const imageneslocales = [
   imageneslocal,
-  imageneslocal1
+  imageneslocal1,
+  imageneslocal2
 ]
   const commentContent = comentarios.map((comment) => (
     <div key={comment.id}>
@@ -147,11 +154,7 @@ const imageneslocales= [
           <h1 className="name-atraccion-h1">Detalles de la atracción: {detalles.name}</h1>
           <h2 className="name-atraccion-h2">{detalles.name}</h2>
           <Carrusel imagenes={imagenesprueba} />
-          {imageneslocales.map((imageneslocal, index) => (
-  (imageneslocal && imageneslocal.length > 0) ? (
-    <Carrusel key={index} imagenes={imageneslocal} />
-  ) : null
-))}
+          <Carrusel imagenes={imageneslocales}/>
           <p className="name-atraccion" >{detalles.direccion}</p>
           <div  className="mapeado-conteiner">
           <Mapeado center={coordenadas}  />
