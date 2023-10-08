@@ -4,22 +4,27 @@ import axios from "axios";
 import "../styles/atraccion.css";
 import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
+import Dropwdownlocales from "./dropdowlocal";
 
 function Locales() {
   const url = "http://localhost:3005/locales";
   const urlatraccion = "http://localhost:3005/atracciones";
+  const [idselected, setidselected] = useState("");
   const [NewLocal, setNewLocal] = useState({
     name: "",
     direccion: "",
     img: "",
     pais: "",
     referencias: "",
-    id:""
+    id: "",
+    atraccionid:idselected,
   });
+
   const [listatraccion, setlistatraccion] = useState([]);
   const [selectedAtraccion, setSelectedAtraccion] = useState({});
-  const [selectedoption, setselectoption] = useState ("")
+  const [selectedoption, setselectoption] = useState("");
 
+  // OBTENGO LOS DATOS DE URLATRACCION Y LO GUARDO EN GETLIST
   const Getlist = async () => {
     const response = await axios.get(urlatraccion);
     return response;
@@ -31,20 +36,26 @@ function Locales() {
       [e.target.id]: e.target.value,
     });
   };
-
   const handleselect = (e) => {
+    // GUARDO LOS DATOS DEL INPUT EN SELECTED
     const selectedAtraccionName = e.target.value;
+    // BUSCO LOS DATOS DE LISTAATRCCION Y COMPARO CON SELECTEDATRRACIONNAME
     const selectedAtraccion = listatraccion.find(
       (atraccion) => atraccion.name === selectedAtraccionName
     );
-    setSelectedAtraccion(selectedAtraccion)
+    // GUARDO EN EL STATE SELECTEDATRACCION LA FUNCION SELECTEDATRACCION
+    setSelectedAtraccion(selectedAtraccion);
     setNewLocal({
       ...NewLocal,
-      referencias:selectedAtraccionName
-    })
-    setselectoption(selectedAtraccionName)
+      referencias: selectedAtraccionName,
+    });
+    setselectoption(selectedAtraccionName);
+    setidselected(selectedAtraccion.id);
   };
-console.log(selectedAtraccion)
+
+  console.log(idselected);
+  console.log(selectedAtraccion);
+
   const addAtraccion = async (e) => {
     e.preventDefault();
     if (
@@ -56,10 +67,15 @@ console.log(selectedAtraccion)
       toast.error("Por favor, complete todos los campos de imágenes.");
       return;
     }
-    const response = await axios.post(url, NewLocal);
+     const updatenewlocal = {
+    ...NewLocal,
+    atraccionid:idselected
+    }
+    const response = await axios.post(url, updatenewlocal);
     console.log(response);
     if (response.status === 201) {
       toast.success(NewLocal.name + " se agregó correctamente ");
+      sendImagesToServer(); // Llama a la función para enviar imágenes al servidor
       resetform();
     } else {
       toast.error("Error al crear una nueva atracción");
@@ -73,19 +89,26 @@ console.log(selectedAtraccion)
       direccion: "",
       img: "",
       pais: "",
-      referencias: ""
+      referencias: "",
     });
     setSelectedAtraccion("");
-    setselectoption("")
-
+    setselectoption("");
   };
-  
-console.log(selectedoption)
+
+  console.log(selectedoption);
+
+  // Función para enviar imágenes al servidor
+  const sendImagesToServer = async () => {
+    // Aquí puedes implementar la lógica para enviar las imágenes al servidor
+    // Utiliza los datos de NewLocal y idselected según tus necesidades
+  };
+
   useEffect(() => {
     Getlist().then((response) => {
       setlistatraccion(response.data);
     });
   }, []);
+
   return (
     <div className="container-atraccion">
       <form className="form-insert-atraccion" onSubmit={addAtraccion}>
@@ -166,13 +189,14 @@ console.log(selectedoption)
             id="pais"
           />
         </div>
-
+        <div>
+          <Dropwdownlocales idselected={idselected} onSubmit={sendImagesToServer} />
+        </div>
         <button type="submit" className="button">
           ADD
         </button>
         <br />
         <br />
-
         <ToastContainer />
         <Link to="/">
           <button className="simple">Ver las atracciones registradas</button>
