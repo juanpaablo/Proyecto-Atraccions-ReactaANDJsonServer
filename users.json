@@ -329,84 +329,56 @@
       "imagesid": 1
     },
     {
-      "name": "prueba new",
+      "name": "test 1",
       "direccion": "kentucki 270",
       "img": "https://images.unsplash.com/photo-1587659901518-7020d4413085?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1074&q=80",
-      "pais": "italia",
-      "referencias": "iglesia clasica",
+      "pais": "egipto",
+      "referencias": "esfinge de giza",
       "id": 2,
-      "idatraccion": ""
-    },
-    {
-      "name": "pruebanueva",
-      "direccion": "kentucki 270",
-      "img": "https://images.unsplash.com/photo-1587659901518-7020d4413085?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1074&q=80",
-      "pais": "italia",
-      "referencias": "esfinge de giza",
-      "id": 3
-    },
-    {
-      "name": "pruebanew4",
-      "direccion": "kentucki 270",
-      "img": "https://images.unsplash.com/photo-1579434502435-e54701d2533d?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=370&q=80",
-      "pais": "argentina",
-      "referencias": "rueda de la fortuna",
-      "id": 4,
-      "idatraccion": {}
-    },
-    {
-      "name": "pruevba new 5",
-      "direccion": "dinamarca 283",
-      "img": "https://images.unsplash.com/photo-1579434502435-e54701d2533d?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=370&q=80",
-      "pais": "argentina",
-      "referencias": "rueda de la fortuna",
-      "id": 5,
-      "idatraccion": ""
-    },
-    {
-      "name": "pruevba new 7",
-      "direccion": "kentucki 270",
-      "img": "https://images.unsplash.com/photo-1587659901518-7020d4413085?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1074&q=80",
-      "pais": "argentina",
-      "referencias": "coliseo romano europeo",
-      "id": 6,
-      "atraccionid": {}
-    },
-    {
-      "name": "prueba new 8",
-      "direccion": "kentucki 270",
-      "img": "https://images.unsplash.com/photo-1587659901518-7020d4413085?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1074&q=80",
-      "pais": "francia",
-      "referencias": "iglesia clasica",
-      "id": 7,
-      "atraccionid": []
-    },
-    {
-      "name": "juan",
-      "direccion": "dinamarca 283",
-      "img": "https://images.unsplash.com/photo-1579434502435-e54701d2533d?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=370&q=80",
-      "pais": "argentina",
-      "referencias": "esfinge de giza",
-      "id": 8,
       "atraccionid": ""
     },
     {
-      "name": "prueba new 9",
-      "direccion": "kentucki 269",
-      "img": "https://images.unsplash.com/photo-1579434502435-e54701d2533d?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=370&q=80",
-      "pais": "argentina",
-      "referencias": "rueda de la fortuna",
-      "atraccionid": 9,
-      "id": 9
+      "name": "test 2",
+      "direccion": "kentucki 270",
+      "img": "https://images.unsplash.com/photo-1587659901518-7020d4413085?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1074&q=80",
+      "pais": "egipto",
+      "referencias": "esfinge de giza",
+      "id": 3,
+      "atraccionid": ""
     },
     {
-      "name": "juan",
+      "name": "test 3",
+      "direccion": "kentucki 270",
+      "img": "https://images.unsplash.com/photo-1587659901518-7020d4413085?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1074&q=80",
+      "pais": "argentina",
+      "referencias": "ciudad de vaticano",
+      "id": 4,
+      "atraccionid": ""
+    },
+    {
+      "name": "test3",
+      "direccion": "dinamarca 283",
+      "img": "https://images.unsplash.com/photo-1579434502435-e54701d2533d?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=370&q=80",
+      "pais": "estados unhidos",
+      "id": 5,
+      "atraccionid": 8
+    },
+    {
+      "name": "test 4",
+      "direccion": "kentucki 269",
+      "img": "https://images.unsplash.com/photo-1582204545593-1356b96cab4b?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=435&q=80",
+      "pais": "dinamarca",
+      "referencias": "iglesia clasica",
+      "id": 6
+    },
+    {
+      "name": "test 5",
       "direccion": "kentucki 270",
       "img": "https://images.unsplash.com/photo-1587659901518-7020d4413085?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1074&q=80",
       "pais": "italia",
-      "referencias": "cataratas del iguazu",
-      "atraccionid": 19,
-      "id": 10
+      "referencias": "cristo redentor",
+      "id": 7,
+      "idatraccion": 18
     }
   ],
   "imageslocal": [
@@ -416,6 +388,48 @@
       "img3": "https://images.unsplash.com/photo-1514404016923-d5f244782ee5?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTh8fGl0YWxpYW4lMjBiYXJ8ZW58MHx8MHx8fDA%3D&auto=format&fit=crop&w=500&q=60",
       "atraccionid": "10",
       "id": 1
+    },
+    {
+      "img": "https://images.unsplash.com/photo-1587659901518-7020d4413085?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1074&q=80",
+      "img2": "https://images.unsplash.com/photo-1438032005730-c779502df39b?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Nnx8aWdsZXNpYXxlbnwwfHwwfHx8MA%3D%3D&auto=format&fit=crop&w=500&q=60",
+      "img3": "https://images.unsplash.com/photo-1438032005730-c779502df39b?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Nnx8aWdsZXNpYXxlbnwwfHwwfHx8MA%3D%3D&auto=format&fit=crop&w=500&q=60",
+      "atraccionid": "",
+      "id": 2
+    },
+    {
+      "img": "https://images.unsplash.com/photo-1587659901518-7020d4413085?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1074&q=80",
+      "img2": "https://images.unsplash.com/photo-1438032005730-c779502df39b?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Nnx8aWdsZXNpYXxlbnwwfHwwfHx8MA%3D%3D&auto=format&fit=crop&w=500&q=60",
+      "img3": "https://images.unsplash.com/photo-1438032005730-c779502df39b?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Nnx8aWdsZXNpYXxlbnwwfHwwfHx8MA%3D%3D&auto=format&fit=crop&w=500&q=60",
+      "atraccionid": 16,
+      "id": 3
+    },
+    {
+      "img": "https://images.unsplash.com/photo-1587659901518-7020d4413085?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1074&q=80",
+      "img2": "https://images.unsplash.com/photo-1438032005730-c779502df39b?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Nnx8aWdsZXNpYXxlbnwwfHwwfHx8MA%3D%3D&auto=format&fit=crop&w=500&q=60",
+      "img3": "https://images.unsplash.com/photo-1438032005730-c779502df39b?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Nnx8aWdsZXNpYXxlbnwwfHwwfHx8MA%3D%3D&auto=format&fit=crop&w=500&q=60",
+      "atraccionid": 16,
+      "id": 4
+    },
+    {
+      "img": "https://images.unsplash.com/photo-1587659901518-7020d4413085?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1074&q=80",
+      "img2": "https://images.unsplash.com/photo-1438032005730-c779502df39b?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Nnx8aWdsZXNpYXxlbnwwfHwwfHx8MA%3D%3D&auto=format&fit=crop&w=500&q=60",
+      "img3": "https://images.unsplash.com/photo-1438032005730-c779502df39b?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Nnx8aWdsZXNpYXxlbnwwfHwwfHx8MA%3D%3D&auto=format&fit=crop&w=500&q=60",
+      "atraccionid": 10,
+      "id": 5
+    },
+    {
+      "img": "https://images.unsplash.com/photo-1579434502435-e54701d2533d?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=370&q=80",
+      "img2": "https://images.unsplash.com/photo-1438032005730-c779502df39b?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Nnx8aWdsZXNpYXxlbnwwfHwwfHx8MA%3D%3D&auto=format&fit=crop&w=500&q=60",
+      "img3": "https://images.unsplash.com/photo-1438032005730-c779502df39b?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Nnx8aWdsZXNpYXxlbnwwfHwwfHx8MA%3D%3D&auto=format&fit=crop&w=500&q=60",
+      "atraccionid": 10,
+      "id": 6
+    },
+    {
+      "img": "https://images.unsplash.com/photo-1587659901518-7020d4413085?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1074&q=80",
+      "img2": "https://images.unsplash.com/photo-1438032005730-c779502df39b?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Nnx8aWdsZXNpYXxlbnwwfHwwfHx8MA%3D%3D&auto=format&fit=crop&w=500&q=60",
+      "img3": "https://images.unsplash.com/photo-1438032005730-c779502df39b?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Nnx8aWdsZXNpYXxlbnwwfHwwfHx8MA%3D%3D&auto=format&fit=crop&w=500&q=60",
+      "atraccionid": 18,
+      "id": 7
     }
   ],
   "backup": [

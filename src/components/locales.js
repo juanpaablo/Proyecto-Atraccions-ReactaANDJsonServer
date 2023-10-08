@@ -17,7 +17,7 @@ function Locales() {
     pais: "",
     referencias: "",
     id: "",
-    atraccionid:idselected,
+    idatraccion:""
   });
 
   const [listatraccion, setlistatraccion] = useState([]);
@@ -48,12 +48,14 @@ function Locales() {
     setNewLocal({
       ...NewLocal,
       referencias: selectedAtraccionName,
+       idatraccion:selectedAtraccion.id
     });
+    
     setselectoption(selectedAtraccionName);
     setidselected(selectedAtraccion.id);
   };
 
-  console.log(idselected);
+  console.log(NewLocal);
   console.log(selectedAtraccion);
 
   const addAtraccion = async (e) => {
@@ -67,11 +69,7 @@ function Locales() {
       toast.error("Por favor, complete todos los campos de imágenes.");
       return;
     }
-     const updatenewlocal = {
-    ...NewLocal,
-    atraccionid:idselected
-    }
-    const response = await axios.post(url, updatenewlocal);
+    const response = await axios.post(url, NewLocal);
     console.log(response);
     if (response.status === 201) {
       toast.success(NewLocal.name + " se agregó correctamente ");
@@ -98,9 +96,10 @@ function Locales() {
   console.log(selectedoption);
 
   // Función para enviar imágenes al servidor
-  const sendImagesToServer = async () => {
+  const sendImagesToServer = async (images) => {
     // Aquí puedes implementar la lógica para enviar las imágenes al servidor
     // Utiliza los datos de NewLocal y idselected según tus necesidades
+    console.log("Imágenes a enviar:", images);
   };
 
   useEffect(() => {
@@ -190,7 +189,7 @@ function Locales() {
           />
         </div>
         <div>
-          <Dropwdownlocales idselected={idselected} onSubmit={sendImagesToServer} />
+          <Dropwdownlocales idselected={idselected} />
         </div>
         <button type="submit" className="button">
           ADD
