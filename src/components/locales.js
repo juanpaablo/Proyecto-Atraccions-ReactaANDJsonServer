@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from "react";
-import { Link } from "react-router-dom";
+import { Await, Link } from "react-router-dom";
 import axios from "axios";
 import "../styles/atraccion.css";
 import { ToastContainer, toast } from "react-toastify";
@@ -9,7 +9,9 @@ import Dropwdownlocales from "./dropdowlocal";
 function Locales() {
   const url = "http://localhost:3005/locales";
   const urlatraccion = "http://localhost:3005/atracciones";
+  const urlimage = `http://localhost:3005/imageslocal`
   const [idselected, setidselected] = useState("");
+  const [idlocal, setidlocal] = useState("")
   const [NewLocal, setNewLocal] = useState({
     name: "",
     direccion: "",
@@ -17,9 +19,9 @@ function Locales() {
     pais: "",
     referencias: "",
     id: "",
-    idatraccion:""
+    atraccionid:"",
   });
-
+  const [imagesdata1, setimageadata1]= useState ()
   const [listatraccion, setlistatraccion] = useState([]);
   const [selectedAtraccion, setSelectedAtraccion] = useState({});
   const [selectedoption, setselectoption] = useState("");
@@ -48,16 +50,19 @@ function Locales() {
     setNewLocal({
       ...NewLocal,
       referencias: selectedAtraccionName,
-       idatraccion:selectedAtraccion.id
+       atraccionid:selectedAtraccion.id,
     });
     
     setselectoption(selectedAtraccionName);
     setidselected(selectedAtraccion.id);
   };
-
-  console.log(NewLocal);
   console.log(selectedAtraccion);
+  //todos los datos de newimage estan en handleimagedata y despues se guardan en setimagedata1
+  const handleimagesdata = (imagesdata) =>{
 
+    setimageadata1(imagesdata)
+
+  }
   const addAtraccion = async (e) => {
     e.preventDefault();
     if (
@@ -70,8 +75,10 @@ function Locales() {
       return;
     }
     const response = await axios.post(url, NewLocal);
+    const imageresponse = await axios.post (urlimage, imagesdata1)
     console.log(response);
-    if (response.status === 201) {
+    setidlocal(response.data.id)
+    if (response.status === 201 && imageresponse.status ===201) {
       toast.success(NewLocal.name + " se agregó correctamente ");
       sendImagesToServer(); // Llama a la función para enviar imágenes al servidor
       resetform();
@@ -80,7 +87,7 @@ function Locales() {
       toast.error("Intente nuevamente más tarde");
     }
   };
-
+  console.log(NewLocal)
   const resetform = () => {
     setNewLocal({
       name: "",
@@ -94,6 +101,7 @@ function Locales() {
   };
 
   console.log(selectedoption);
+  console.log(idlocal)
 
   // Función para enviar imágenes al servidor
   const sendImagesToServer = async (images) => {
@@ -189,7 +197,7 @@ function Locales() {
           />
         </div>
         <div>
-          <Dropwdownlocales idselected={idselected} />
+          <Dropwdownlocales idselected={idselected} onimagedata={handleimagesdata} idlocal={idlocal} />
         </div>
         <button type="submit" className="button">
           ADD

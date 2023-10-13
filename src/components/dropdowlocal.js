@@ -6,18 +6,22 @@ import "../styles/dropdown.css";
 import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 
+
 function Dropwdownlocales(props) {
   const [Dropdown1, setdropdown] = useState(false);
   const [dropdownInputFocused, setDropdownInputFocused] = useState(false); // Nuevo estado para rastrear el enfoque del campo de entrada
 
   const { idselected } = props;
+  const { idlocal } = props;
   const imagesurl = `http://localhost:3005/imageslocal`;
+
   
   const [newImage, setnewImage] = useState({
     img: "",
     img2: "",
     img3: "",
-    atraccionid:idselected
+    atraccionid:idselected,
+    localid:idlocal,
   });
   const Resetform = () => {
     setnewImage({
@@ -48,9 +52,8 @@ function Dropwdownlocales(props) {
       window.location.reload();
     }
   };
-
   const handleChangeimage = (e) => {
-    setnewImage({ ...newImage, [e.target.name]: e.target.value });
+    setnewImage({ ...newImage, [e.target.name]: e.target.value,  });
   };
   const abrircerrardropdown = () => {
     if (!dropdownInputFocused) {
@@ -60,12 +63,15 @@ function Dropwdownlocales(props) {
   //este input basicamente lo que hace es que verifica si el enfoque esta en el input y si es asi no se cerrara
   const handleInputFocus = () => {
     setDropdownInputFocused(true);
-    setnewImage({...newImage, atraccionid:idselected})
+    setnewImage({...newImage, atraccionid:idselected, localid:idlocal})
+    //este props lo qye hace es guardar en onimagedata los datos de newimage
+    props.onimagedata(newImage)
   };
   //si puerde el enfoque este se activara y cerrara
   const handleInputBlur = () => {
     setDropdownInputFocused(false);
   };
+  console.log(idlocal)
 console.log(newImage)
   return (
     <div className="app">
