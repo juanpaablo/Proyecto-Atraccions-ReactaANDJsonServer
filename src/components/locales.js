@@ -25,7 +25,30 @@ function Locales() {
   const [listatraccion, setlistatraccion] = useState([]);
   const [selectedAtraccion, setSelectedAtraccion] = useState({});
   const [selectedoption, setselectoption] = useState("");
-
+  const Getidlocal = async () => {
+    try {
+      const response = await axios.get(url);
+      if (response.data.length > 0) {
+        // Obtener el último registro y sumar 1 al ID para obtener el siguiente ID
+        const lastLocal = response.data[response.data.length - 1];
+        const nextLocalId = lastLocal.id + 1;
+        setidlocal(nextLocalId);
+      } else {
+        // Si no hay registros, establecer el ID en 1 (u otro valor predeterminado si es necesario)
+        setidlocal(1);
+      }
+    } catch (error) {
+      console.error("Error al obtener los datos", error);
+    }
+  }
+  
+    useEffect(() => {
+      Getlist().then((response) => {
+        setlistatraccion(response.data);
+        Getidlocal(); // Llama a Getidlocal para obtener el id de locales
+      });
+    }, []);
+console.log(idlocal)
   // OBTENGO LOS DATOS DE URLATRACCION Y LO GUARDO EN GETLIST
   const Getlist = async () => {
     const response = await axios.get(urlatraccion);
@@ -74,14 +97,18 @@ function Locales() {
       toast.error("Por favor, complete todos los campos de imágenes.");
       return;
     }
+    setNewLocal({
+      ...NewLocal,
+      localid:idlocal,
+    })
     const response = await axios.post(url, NewLocal);
     const imageresponse = await axios.post (urlimage, imagesdata1)
     console.log(response);
-    setidlocal(response.data.id)
     if (response.status === 201 && imageresponse.status ===201) {
       toast.success(NewLocal.name + " se agregó correctamente ");
       sendImagesToServer(); // Llama a la función para enviar imágenes al servidor
       resetform();
+      window.location.reload()
     } else {
       toast.error("Error al crear una nueva atracción");
       toast.error("Intente nuevamente más tarde");

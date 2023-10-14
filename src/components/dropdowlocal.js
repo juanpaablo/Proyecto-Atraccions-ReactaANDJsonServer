@@ -11,8 +11,7 @@ function Dropwdownlocales(props) {
   const [Dropdown1, setdropdown] = useState(false);
   const [dropdownInputFocused, setDropdownInputFocused] = useState(false); // Nuevo estado para rastrear el enfoque del campo de entrada
 
-  const { idselected } = props;
-  const { idlocal } = props;
+  const { idselected, idlocal } = props;
   const imagesurl = `http://localhost:3005/imageslocal`;
 
   
@@ -63,13 +62,13 @@ function Dropwdownlocales(props) {
   //este input basicamente lo que hace es que verifica si el enfoque esta en el input y si es asi no se cerrara
   const handleInputFocus = () => {
     setDropdownInputFocused(true);
-    setnewImage({...newImage, atraccionid:idselected, localid:idlocal})
     //este props lo qye hace es guardar en onimagedata los datos de newimage
-    props.onimagedata(newImage)
   };
   //si puerde el enfoque este se activara y cerrara
   const handleInputBlur = () => {
     setDropdownInputFocused(false);
+    setnewImage({...newImage,atraccionid:idselected, localid:idlocal})
+    props.onimagedata(newImage)
   };
   console.log(idlocal)
 console.log(newImage)
