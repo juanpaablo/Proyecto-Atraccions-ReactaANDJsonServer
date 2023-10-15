@@ -72,15 +72,6 @@
       "id": 13
     },
     {
-      "name": "glaciar perito moreno",
-      "direccion": "santa cruz 011",
-      "img": "https://images.unsplash.com/photo-1577373482643-5c7ccf8f0ac9?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=870&q=80",
-      "latitud": "-50.4750",
-      "longitud": "-73.0347",
-      "pais": "argentina",
-      "id": 15
-    },
-    {
       "name": "esfinge de giza",
       "direccion": "giza 122",
       "img": "https://images.unsplash.com/photo-1669301038557-f84309ac1269?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NXx8cGlyYW1pZGUlMjBkZSUyMGdpemF8ZW58MHx8MHx8fDA%3D&auto=format&fit=crop&w=500&q=60",
@@ -115,6 +106,15 @@
       "longitud": "",
       "pais": "argentina",
       "id": 19
+    },
+    {
+      "name": "perito moreno",
+      "direccion": "san lorenzo 122",
+      "img": "https://images.unsplash.com/photo-1590246646417-b0199da13a3d?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MXx8cGVyaXRvJTIwbW9yZW5vfGVufDB8fDB8fHww&auto=format&fit=crop&w=500&q=60",
+      "latitud": "50.4749",
+      "longitud": "73.0474",
+      "pais": "argentina",
+      "id": 20
     }
   ],
   "comentarios": [
@@ -316,6 +316,13 @@
       "img3": "https://images.unsplash.com/photo-1541686826972-068336f11d45?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8OHx8Y2F0YXJhdGFzJTIwZGVsJTIwaWd1YXp1fGVufDB8fDB8fHww&auto=format&fit=crop&w=500&q=60",
       "atraccionid": "19",
       "id": 13
+    },
+    {
+      "img1": "https://images.unsplash.com/photo-1529414988992-52e2db9372b2?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MXx8Z2xhY2lhciUyMHBlcml0byUyMG1vcmVub3xlbnwwfHwwfHx8MA%3D%3D&auto=format&fit=crop&w=500&q=60",
+      "img2": "https://images.unsplash.com/photo-1593434820349-0ca11844c957?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8M3x8Z2xhY2lhciUyMHBlcml0byUyMG1vcmVub3xlbnwwfHwwfHx8MA%3D%3D&auto=format&fit=crop&w=500&q=60",
+      "img3": "https://images.unsplash.com/photo-1552751753-0fc84ae5b6c8?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8N3x8Z2xhY2lhciUyMHBlcml0byUyMG1vcmVub3xlbnwwfHwwfHx8MA%3D%3D&auto=format&fit=crop&w=500&q=60",
+      "atraccionid": "20",
+      "id": 14
     }
   ],
   "locales": [
@@ -354,6 +361,24 @@
       "referencias": "ciudad de vaticano",
       "id": 4,
       "atraccionid": 13
+    },
+    {
+      "name": "cerro`s bar",
+      "direccion": "jujuy 12",
+      "img": "https://images.unsplash.com/photo-1642624692237-48449dab3ceb?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8OXx8YmFyJTIwZW4lMjB6b25hcyUyMGRlJTIwY2Vycm9zfGVufDB8fDB8fHww&auto=format&fit=crop&w=500&q=60",
+      "pais": "argentina",
+      "referencias": "cerros de los siete colores",
+      "id": 6,
+      "atraccionid": 17
+    },
+    {
+      "name": "glaciar`s bar ",
+      "direccion": "san lorenzo 130",
+      "img": "https://images.unsplash.com/photo-1642624692237-48449dab3ceb?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTF8fGJhciUyMGVuJTIwem9uYXMlMjBmcmlhc3xlbnwwfHwwfHx8MA%3D%3D&auto=format&fit=crop&w=500&q=60",
+      "pais": "argentina",
+      "referencias": "perito moreno",
+      "id": 7,
+      "atraccionid": 20
     }
   ],
   "imageslocal": [
@@ -388,11 +413,27 @@
       "atraccionid": 13,
       "localid": 4,
       "id": 4
+    },
+    {
+      "img": "https://images.unsplash.com/photo-1620219365994-f443a86ea626?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8OHx8YmFyJTIwZW4lMjB6b25hcyUyMGRlJTIwY2Vycm9zfGVufDB8fDB8fHww&auto=format&fit=crop&w=500&q=60",
+      "img2": "https://images.unsplash.com/photo-1508253730651-e5ace80a7025?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTZ8fGJhciUyMGVuJTIwem9uYXMlMjBkZSUyMGNlcnJvc3xlbnwwfHwwfHx8MA%3D%3D&auto=format&fit=crop&w=500&q=60",
+      "img3": "https://images.unsplash.com/photo-1470337458703-46ad1756a187?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTR8fGJhciUyMGVuJTIwem9uYXMlMjBkZSUyMGNlcnJvc3xlbnwwfHwwfHx8MA%3D%3D&auto=format&fit=crop&w=500&q=60",
+      "atraccionid": 17,
+      "localid": 6,
+      "id": 6
+    },
+    {
+      "img": "https://images.unsplash.com/photo-1514361892635-6b07e31e75f9?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTV8fGJhciUyMGVuJTIwem9uYXMlMjBmcmlhc3xlbnwwfHwwfHx8MA%3D%3D&auto=format&fit=crop&w=500&q=60",
+      "img2": "https://images.unsplash.com/photo-1511914678378-2906b1f69dcf?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MjZ8fGJhciUyMGVuJTIwem9uYXMlMjBmcmlhc3xlbnwwfHwwfHx8MA%3D%3D&auto=format&fit=crop&w=500&q=60",
+      "img3": "https://images.unsplash.com/photo-1462539405390-d0bdb635c7d1?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NDF8fGJhciUyMGVuJTIwem9uYXMlMjBmcmlhc3xlbnwwfHwwfHx8MA%3D%3D&auto=format&fit=crop&w=500&q=60",
+      "atraccionid": 20,
+      "localid": 7,
+      "id": 7
     }
   ],
   "backup": [
     {
-      "img": "https://images.unsplash.com/photo-1655332430558-87db4935b4fc?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTZ8fGJhciUyMGRlJTIwYnJhemlsfGVufDB8fDB8fHww&auto=format&fit=crop&w=500&q=60",
+      "img": "https://thumbs.dreamstime.com/b/artico-ice-bar-honningsvag-norway-july-one-most-important-places-to-visit-mageroya-island-78756921.jpg",
       "img2": "https://images.unsplash.com/photo-1516920846492-81bc6da9fc38?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTh8fGJhciUyMGRlJTIwYnJhemlsfGVufDB8fDB8fHww&auto=format&fit=crop&w=500&q=60",
       "img3": "https://images.unsplash.com/photo-1559757238-fb934416138f?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTF8fGJhciUyMGRlJTIwYnJhemlsfGVufDB8fDB8fHww&auto=format&fit=crop&w=500&q=60",
       "atraccionid": "18",
