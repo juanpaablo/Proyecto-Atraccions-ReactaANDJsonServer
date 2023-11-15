@@ -57,22 +57,22 @@ function EditarAtraccion(){
     <form onSubmit={edit}>
     <br></br>
     <label>name: </label>
-    <input value={atraccion.name} type='text' name='name' id="name" onChange={handleChange}></input>
+    <input value={atraccion.name} className="input" type='text' name='name' id="name" onChange={handleChange}></input>
     <br></br>
     <label>direccion: </label>
-    <input value={atraccion.direccion} type='text' name='direccion' id="direccion" onChange={handleChange}></input>
+    <input value={atraccion.direccion} className="input" type='text' name='direccion' id="direccion" onChange={handleChange}></input>
     <br></br>
     <label>imagen: </label>
-    <input value={atraccion.img} type='text' name='img' id="img" onChange={handleChange}></input>
+    <input value={atraccion.img} className="input" type='text' name='img' id="img" onChange={handleChange}></input>
     <br></br>
     <label>pais: </label>
-    <input value={atraccion.pais} type='text' name='pais' id="pais" onChange={handleChange}></input>
+    <input value={atraccion.pais} className="input" type='text' name='pais' id="pais" onChange={handleChange}></input>
     <br></br>
     <label>latitud: </label>
-    <input value={atraccion.latitud} type='text' name='latitud' id="latitud" onChange={handleChange}></input>
+    <input value={atraccion.latitud} className="input" type='text' name='latitud' id="latitud" onChange={handleChange}></input>
     <br></br>
     <label>longitud: </label>
-    <input value={atraccion.longitud} type='text' name='longitud' id="longitud" onChange={handleChange}></input>
+    <input value={atraccion.longitud} className="input" type='text' name='longitud' id="longitud" onChange={handleChange}></input>
     <br></br>
     <br></br>
     <button type='submit'>EDIT</button>
