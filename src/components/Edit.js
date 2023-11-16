@@ -1,6 +1,8 @@
 import React,{useState, useEffect} from "react";
 import { Link } from "react-router-dom";
 import axios from "axios";
+import "../styles/edit.css"
+import { toast, ToastContainer } from "react-toastify"
 function EditarAtraccion(){
     const url = "http://localhost:3005/atracciones";
     const Getlist = async () =>{
@@ -43,18 +45,18 @@ function EditarAtraccion(){
     const edit = async (e) =>
   { e.preventDefault();
     const res = await axios.put(url+'/'+atraccion.id,atraccion)
-    if(res.status === 200){alert('atraccion editada'); window.location.reload() } else if(res.status===404){
-        alert("para poder editar necesita seleccionar una atraccion")
+    if(res.status === 200){toast.success('atraccion editada'); window.location.reload() } else if(res.status===404){
+        toast.error("para poder editar necesita seleccionar una atraccion")
     }
   } 
 
   return (
-    <div className='input'>
-      <select className='select' onChange={handleselect}>
+    <div className='conteiner'>
+      <select className='select-atraccion' onChange={handleselect}>
         {list.map(atraccion => <option key={atraccion.id}>{atraccion.name}</option>)}
       </select>
 
-    <form onSubmit={edit}>
+    <form className="form-insert-atraccion" onSubmit={edit}>
     <br></br>
     <label>name: </label>
     <input value={atraccion.name} className="input" type='text' name='name' id="name" onChange={handleChange}></input>
@@ -75,8 +77,9 @@ function EditarAtraccion(){
     <input value={atraccion.longitud} className="input" type='text' name='longitud' id="longitud" onChange={handleChange}></input>
     <br></br>
     <br></br>
-    <button type='submit'>EDIT</button>
-    <Link to={"/"}> <button> volver a la pagina principal</button>   </Link>
+    <button type='submit' className="button" id="button-edit" >EDIT</button>
+    <Link to={"/"}> <button className="button"> volver a la pagina principal</button>   </Link>
+    <ToastContainer/>
     </form>
     </div>
   )

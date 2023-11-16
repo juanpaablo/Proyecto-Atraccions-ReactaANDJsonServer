@@ -1,0 +1,12 @@
+.conteiner{
+    display: flex;
+    align-items: center;
+    align-content: center;
+    justify-content: space-evenly;
+    flex-wrap: nowrap;
+    flex-direction: column;
+    margin: 40px;
+}
+#button-edit {
+   margin: 10px;
+  }
