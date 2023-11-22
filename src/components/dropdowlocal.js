@@ -113,7 +113,6 @@ console.log(newImage)
               name="submit"
               onFocus={handleInputFocus}
               onBlur={handleInputBlur} onClick={addimage} >
-                agregar imagenes
                </button>
           </DropdownItem>
         </DropdownMenu>

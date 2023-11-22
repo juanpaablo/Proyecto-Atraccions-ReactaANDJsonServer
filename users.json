@@ -44,7 +44,7 @@
     {
       "id": 8,
       "name": "circo de serafinoo",
-      "direccion": "roma 14",
+      "direccion": "roma 140",
       "img": "https://images.unsplash.com/photo-1582204545593-1356b96cab4b?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=435&q=80",
       "pais": "italia"
     },
@@ -72,13 +72,13 @@
       "id": 13
     },
     {
+      "id": 16,
       "name": "esfinge de giza",
       "direccion": "giza 122",
       "img": "https://images.unsplash.com/photo-1669301038557-f84309ac1269?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NXx8cGlyYW1pZGUlMjBkZSUyMGdpemF8ZW58MHx8MHx8fDA%3D&auto=format&fit=crop&w=500&q=60",
-      "latitud": "29.9753",
-      "longitud": "31.1376",
       "pais": "egipto",
-      "id": 16
+      "longitud": "31.1376",
+      "latitud": "29.9753"
     },
     {
       "name": "cerros de los siete colores",
@@ -90,13 +90,13 @@
       "id": 17
     },
     {
+      "id": 18,
       "name": "cristo redentor",
       "direccion": "rio de janeiro 911",
       "img": "https://images.unsplash.com/photo-1564659907532-6b5f98c8e70f?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Nnx8Y3Jpc3RvJTIwcmVkZW50b3J8ZW58MHx8MHx8fDA%3D&auto=format&fit=crop&w=500&q=60",
-      "latitud": " -22.9519",
-      "longitud": "-43.2105",
       "pais": "brazil",
-      "id": 18
+      "longitud": "-43.2105",
+      "latitud": " -22.9519"
     },
     {
       "name": "cataratas del iguazu",
@@ -115,6 +115,15 @@
       "longitud": "73.0474",
       "pais": "argentina",
       "id": 20
+    },
+    {
+      "name": "estatua de la libertad",
+      "direccion": "washington 122",
+      "img": "https://plus.unsplash.com/premium_photo-1672082422409-879d79636902?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MXx8ZXN0YXR1YSUyMGRlJTIwbGElMjBsaWJlcnRhZHxlbnwwfHwwfHx8MA%3D%3D",
+      "latitud": "",
+      "longitud": "",
+      "pais": "estados unidos",
+      "id": 21
     }
   ],
   "comentarios": [
@@ -244,6 +253,18 @@
       "email": "pablosalazar@outlook.com",
       "atraccionId": "9",
       "id": 21
+    },
+    {
+      "comments": "me gusta mucho el bar y la atraccion tambien",
+      "email": "pablosalazar@outlook.com",
+      "atraccionId": "16",
+      "id": 22
+    },
+    {
+      "comments": "me gusta mucho el bar y la atraccion tambien",
+      "email": "pablosalazar@outlook.com",
+      "atraccionId": "10",
+      "id": 23
     }
   ],
   "images": [
@@ -323,6 +344,20 @@
       "img3": "https://images.unsplash.com/photo-1552751753-0fc84ae5b6c8?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8N3x8Z2xhY2lhciUyMHBlcml0byUyMG1vcmVub3xlbnwwfHwwfHx8MA%3D%3D&auto=format&fit=crop&w=500&q=60",
       "atraccionid": "20",
       "id": 14
+    },
+    {
+      "img1": "https://plus.unsplash.com/premium_photo-1694475496945-238ac1177291?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MXx8ZXNmaW5nZSUyMGRlJTIwZ2l6YSVDMiVCNHxlbnwwfHwwfHx8MA%3D%3D",
+      "img2": "https://images.unsplash.com/photo-1632836348081-12e8205dd2db?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NHx8ZXNmaW5nZSUyMGRlJTIwZ2l6YSVDMiVCNHxlbnwwfHwwfHx8MA%3D%3D",
+      "img3": "https://plus.unsplash.com/premium_photo-1694475367746-526db5575bb4?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NXx8ZXNmaW5nZSUyMGRlJTIwZ2l6YSVDMiVCNHxlbnwwfHwwfHx8MA%3D%3D",
+      "atraccionid": "16",
+      "id": 15
+    },
+    {
+      "img1": "https://images.unsplash.com/photo-1503572327579-b5c6afe5c5c5?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8ZXN0YXR1YSUyMGRlJTIwbGElMjBsaWJlcnRhZHxlbnwwfHwwfHx8MA%3D%3D",
+      "img2": "https://images.unsplash.com/photo-1494449880320-18d3dae5d16e?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8M3x8ZXN0YXR1YSUyMGRlJTIwbGElMjBsaWJlcnRhZHxlbnwwfHwwfHx8MA%3D%3D",
+      "img3": "https://images.unsplash.com/photo-1585155967849-91c736589c84?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Nnx8ZXN0YXR1YSUyMGRlJTIwbGElMjBsaWJlcnRhZHxlbnwwfHwwfHx8MA%3D%3D",
+      "atraccionid": "21",
+      "id": 16
     }
   ],
   "locales": [
@@ -379,6 +414,33 @@
       "referencias": "perito moreno",
       "id": 7,
       "atraccionid": 20
+    },
+    {
+      "name": "gizas bar",
+      "direccion": "giza 923",
+      "img": "https://th.bing.com/th/id/OIG.OwXA1_H6.PCxPcxA7shs?w=270&h=270&c=6&r=0&o=5&dpr=1.3&pid=ImgGn",
+      "pais": "egipto",
+      "referencias": "esfinge de giza",
+      "id": 8,
+      "atraccionid": 16
+    },
+    {
+      "name": "cristos bar",
+      "direccion": "rio de janeiro 912",
+      "img": "https://th.bing.com/th/id/OIG.dOYs43xF_Zt5lwRrwh8I?w=270&h=270&c=6&r=0&o=5&dpr=1.3&pid=ImgGn",
+      "pais": "brazil",
+      "referencias": "cristo redentor",
+      "id": 9,
+      "atraccionid": 18
+    },
+    {
+      "name": "libertis bar",
+      "direccion": "washington 122",
+      "img": "https://th.bing.com/th/id/OIG.EO2mkL3hrxvPiF5uOYbp?w=270&h=270&c=6&r=0&o=5&dpr=1.3&pid=ImgGn",
+      "pais": "estados unhidos",
+      "referencias": "estatua de la libertad",
+      "id": 10,
+      "atraccionid": 21
     }
   ],
   "imageslocal": [
@@ -429,6 +491,30 @@
       "atraccionid": 20,
       "localid": 7,
       "id": 7
+    },
+    {
+      "img": "https://th.bing.com/th/id/OIG.OwXA1_H6.PCxPcxA7shs?w=270&h=270&c=6&r=0&o=5&dpr=1.3&pid=ImgGn",
+      "img2": "https://th.bing.com/th/id/OIG.OwXA1_H6.PCxPcxA7shs?w=270&h=270&c=6&r=0&o=5&dpr=1.3&pid=ImgGn",
+      "img3": "https://th.bing.com/th/id/OIG.OwXA1_H6.PCxPcxA7shs?w=270&h=270&c=6&r=0&o=5&dpr=1.3&pid=ImgGn",
+      "atraccionid": 16,
+      "localid": 8,
+      "id": 8
+    },
+    {
+      "img": "https://th.bing.com/th/id/OIG.dOYs43xF_Zt5lwRrwh8I?w=270&h=270&c=6&r=0&o=5&dpr=1.3&pid=ImgGn",
+      "img2": "https://th.bing.com/th/id/OIG.dOYs43xF_Zt5lwRrwh8I?w=270&h=270&c=6&r=0&o=5&dpr=1.3&pid=ImgGn",
+      "img3": "https://th.bing.com/th/id/OIG.dOYs43xF_Zt5lwRrwh8I?w=270&h=270&c=6&r=0&o=5&dpr=1.3&pid=ImgGn",
+      "atraccionid": 18,
+      "localid": 9,
+      "id": 9
+    },
+    {
+      "img": "https://th.bing.com/th/id/OIG.EO2mkL3hrxvPiF5uOYbp?w=270&h=270&c=6&r=0&o=5&dpr=1.3&pid=ImgGn",
+      "img2": "https://th.bing.com/th/id/OIG.EO2mkL3hrxvPiF5uOYbp?w=270&h=270&c=6&r=0&o=5&dpr=1.3&pid=ImgGn",
+      "img3": "https://th.bing.com/th/id/OIG.EO2mkL3hrxvPiF5uOYbp?w=270&h=270&c=6&r=0&o=5&dpr=1.3&pid=ImgGn",
+      "atraccionid": 21,
+      "localid": 10,
+      "id": 10
     }
   ],
   "backup": [

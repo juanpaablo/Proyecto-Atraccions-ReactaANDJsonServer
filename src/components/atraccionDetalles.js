@@ -154,6 +154,8 @@ const imageneslocales = [
           <h1 className="name-atraccion-h1">Detalles de la atracción: {detalles.name}</h1>
           <h2 className="name-atraccion-h2">{detalles.name}</h2>
           <Carrusel imagenes={imagenesprueba} />
+          <br></br>
+          <br></br>
           <Carrusel imagenes={imageneslocales}/>
           <p className="name-atraccion" >{detalles.direccion}</p>
           <div  className="mapeado-conteiner">

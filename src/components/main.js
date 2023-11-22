@@ -81,6 +81,7 @@ console.log(filtrarvoz)
       <div className="botones-atraccions">
       <button
         className="simple"
+        aria-label="borrar"
         onClick={(del) => {
           axios.delete(Url + "/" + card.id).then((response) => {
             if (response.status === 200) {
@@ -93,10 +94,10 @@ console.log(filtrarvoz)
         borrar
       </button>
       <Link to={`/atracciones/${card.id}`}>
-        <button className="simple">mostrar atracción</button>
+        <button className="simple" aria-label="mostrar atraccion" >mostrar atracción</button>
       </Link>
       <Link to="/Edit">
-        <button className="simple">editar</button>
+        <button className="simple" aria-label="editar" >editar</button>
       </Link>
       <br></br>
       </div>
@@ -113,19 +114,19 @@ console.log(filtrarvoz)
         ) : (
           <Busqueda onFiltrar={filtrarAtracciones} />
         )}
-        <button className="simple" onClick={togleusevoice}>
+        <button className="simple" aria-label="activar microfono"  onClick={togleusevoice}>
           Voice
         </button>
         </div>
-        <label htmlFor="filterSelect">Filtrar por:</label>
+        <label htmlFor="filterSelect" aria-label="filtrar por:">Filtrar por:</label>
         <select
           id="filterSelect"
           value={Selectoption}
           onChange={(e) => setSelectoption(e.target.value)}
         >
-          <option value="">Todos</option>
+          <option value="" aria-label="opcion todos" >Todos</option> 
           {UniqueCountries.map((country) => (
-            <option key={country} value={country}>
+              <option key={country} value={country} aria-label={`seleccionar ${country}`}>
               {country}
             </option>
           ))}
@@ -135,16 +136,16 @@ console.log(filtrarvoz)
       <section id="section-botones">
         
           <Link to="/atraccion">
-            <button className="simple">agregar atracción</button>
+            <button className="simple" aria-label="agregar atraccion">agregar atracción</button>
           </Link>
           <Link to="/Register">
-            <button className="simple">registrar usuarios</button>
+            <button className="simple" aria-label="registrar usuarios" >registrar usuarios</button>
           </Link>
           <Link to="/locales">
-        <button className="simple">agregar local</button>
+        <button className="simple" aria-label="agregar local" >agregar local</button>
       </Link>
       <Link to="/localescarrusel">
-        <button className="simple">mostrar local</button>
+        <button className="simple" aria-label="mostrar local" >mostrar local</button>
       </Link>
         </section>
         <ToastContainer/>
