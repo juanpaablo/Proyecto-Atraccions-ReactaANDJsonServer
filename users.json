@@ -63,15 +63,6 @@
       "pais": "dinamarca"
     },
     {
-      "name": "ciudad de vaticano",
-      "direccion": "vaticano 911",
-      "img": "https://plus.unsplash.com/premium_photo-1661962860425-373f38f8e6f4?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=435&q=80",
-      "latitud": "41.9029",
-      "longitud": "12.4534",
-      "pais": "italia",
-      "id": 13
-    },
-    {
       "id": 16,
       "name": "esfinge de giza",
       "direccion": "giza 122",
@@ -99,24 +90,6 @@
       "latitud": " -22.9519"
     },
     {
-      "name": "cataratas del iguazu",
-      "direccion": "mejia 21",
-      "img": "https://images.unsplash.com/photo-1604626676599-e21a94462216?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8M3x8Y2F0YXJhdGFzJTIwZGVsJTIwaWd1YXp1fGVufDB8fDB8fHww&auto=format&fit=crop&w=500&q=60",
-      "latitud": "",
-      "longitud": "",
-      "pais": "argentina",
-      "id": 19
-    },
-    {
-      "name": "perito moreno",
-      "direccion": "san lorenzo 122",
-      "img": "https://images.unsplash.com/photo-1590246646417-b0199da13a3d?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MXx8cGVyaXRvJTIwbW9yZW5vfGVufDB8fDB8fHww&auto=format&fit=crop&w=500&q=60",
-      "latitud": "50.4749",
-      "longitud": "73.0474",
-      "pais": "argentina",
-      "id": 20
-    },
-    {
       "name": "estatua de la libertad",
       "direccion": "washington 122",
       "img": "https://plus.unsplash.com/premium_photo-1672082422409-879d79636902?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MXx8ZXN0YXR1YSUyMGRlJTIwbGElMjBsaWJlcnRhZHxlbnwwfHwwfHx8MA%3D%3D",
@@ -124,6 +97,36 @@
       "longitud": "",
       "pais": "estados unidos",
       "id": 21
+    },
+    {
+      "name": "taj majal",
+      "direccion": "india 23",
+      "img": "https://images.unsplash.com/photo-1667433776314-018332d7c4ad?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Nnx8YXRyYWNjaW9uJTIwZGUlMjBpbmRpYXxlbnwwfHwwfHx8MA%3D%3D",
+      "latitud": "",
+      "longitud": "",
+      "pais": "india",
+      "detallesAtraccion": "un gran edificio antiguo",
+      "id": 22
+    },
+    {
+      "name": "himachi pradesh",
+      "direccion": "birma 232",
+      "img": "https://images.unsplash.com/photo-1643541930842-25f95aa30ff1?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NXx8aW5kaWElMjBhdHJhY2Npb258ZW58MHx8MHx8fDA%3D",
+      "latitud": "",
+      "longitud": "",
+      "pais": "india",
+      "detallesAtraccion": "un gran edificio antiguo",
+      "id": 23
+    },
+    {
+      "name": "niagara cataratas",
+      "direccion": "usa 23",
+      "img": "https://images.unsplash.com/photo-1533094602577-198d3beab8ea?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8Y2F0YXJhdGFzJTIwZGVsJTIwbmklQzMlQTFnYXJhfGVufDB8fDB8fHww",
+      "latitud": "",
+      "longitud": "",
+      "pais": "estados unidos",
+      "detallesAtraccion": "mucha agua y muy peligroso",
+      "id": 24
     }
   ],
   "comentarios": [
@@ -358,6 +361,41 @@
       "img3": "https://images.unsplash.com/photo-1585155967849-91c736589c84?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Nnx8ZXN0YXR1YSUyMGRlJTIwbGElMjBsaWJlcnRhZHxlbnwwfHwwfHx8MA%3D%3D",
       "atraccionid": "21",
       "id": 16
+    },
+    {
+      "img1": "https://images.unsplash.com/photo-1667433776314-018332d7c4ad?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Nnx8YXRyYWNjaW9uJTIwZGUlMjBpbmRpYXxlbnwwfHwwfHx8MA%3D%3D",
+      "img2": "https://images.unsplash.com/photo-1667433776314-018332d7c4ad?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Nnx8YXRyYWNjaW9uJTIwZGUlMjBpbmRpYXxlbnwwfHwwfHx8MA%3D%3D",
+      "img3": "https://images.unsplash.com/photo-1667433776314-018332d7c4ad?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Nnx8YXRyYWNjaW9uJTIwZGUlMjBpbmRpYXxlbnwwfHwwfHx8MA%3D%3D",
+      "atraccionid": "22",
+      "id": 17
+    },
+    {
+      "img1": "https://images.unsplash.com/photo-1643541930842-25f95aa30ff1?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NXx8YXRyYWNjaW9uJTIwZGUlMjBpbmRpYXxlbnwwfHwwfHx8MA%3D%3D",
+      "img2": "https://images.unsplash.com/photo-1643541930842-25f95aa30ff1?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NXx8YXRyYWNjaW9uJTIwZGUlMjBpbmRpYXxlbnwwfHwwfHx8MA%3D%3D",
+      "img3": "https://images.unsplash.com/photo-1643541930842-25f95aa30ff1?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NXx8YXRyYWNjaW9uJTIwZGUlMjBpbmRpYXxlbnwwfHwwfHx8MA%3D%3D",
+      "atraccionid": "23",
+      "id": 18
+    },
+    {
+      "img1": "https://images.unsplash.com/photo-1643541930842-25f95aa30ff1?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NXx8aW5kaWElMjBhdHJhY2Npb258ZW58MHx8MHx8fDA%3D",
+      "img2": "https://images.unsplash.com/photo-1643541930842-25f95aa30ff1?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NXx8aW5kaWElMjBhdHJhY2Npb258ZW58MHx8MHx8fDA%3D",
+      "img3": "https://images.unsplash.com/photo-1643541930842-25f95aa30ff1?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NXx8aW5kaWElMjBhdHJhY2Npb258ZW58MHx8MHx8fDA%3D",
+      "atraccionid": "23",
+      "id": 19
+    },
+    {
+      "img1": "https://images.unsplash.com/photo-1643541930842-25f95aa30ff1?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NXx8aW5kaWElMjBhdHJhY2Npb258ZW58MHx8MHx8fDA%3D",
+      "img2": "https://images.unsplash.com/photo-1643541930842-25f95aa30ff1?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NXx8aW5kaWElMjBhdHJhY2Npb258ZW58MHx8MHx8fDA%3D",
+      "img3": "https://images.unsplash.com/photo-1643541930842-25f95aa30ff1?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NXx8aW5kaWElMjBhdHJhY2Npb258ZW58MHx8MHx8fDA%3D",
+      "atraccionid": "23",
+      "id": 20
+    },
+    {
+      "img1": "https://plus.unsplash.com/premium_photo-1661895337095-cc30b052a27c?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MXx8Y2F0YXJhdGFzJTIwZGVsJTIwbmklQzMlQTFnYXJhfGVufDB8fDB8fHww",
+      "img2": "https://plus.unsplash.com/premium_photo-1661895337095-cc30b052a27c?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MXx8Y2F0YXJhdGFzJTIwZGVsJTIwbmklQzMlQTFnYXJhfGVufDB8fDB8fHww",
+      "img3": "https://plus.unsplash.com/premium_photo-1661895337095-cc30b052a27c?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MXx8Y2F0YXJhdGFzJTIwZGVsJTIwbmklQzMlQTFnYXJhfGVufDB8fDB8fHww",
+      "atraccionid": "24",
+      "id": 21
     }
   ],
   "locales": [
@@ -441,6 +479,46 @@
       "referencias": "estatua de la libertad",
       "id": 10,
       "atraccionid": 21
+    },
+    {
+      "name": "indias bars",
+      "direccion": "india43",
+      "img": "https://images.unsplash.com/photo-1667433776314-018332d7c4ad?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Nnx8YXRyYWNjaW9uJTIwZGUlMjBpbmRpYXxlbnwwfHwwfHx8MA%3D%3D",
+      "pais": "india",
+      "referencias": "taj majal",
+      "id": 11,
+      "atraccionid": 22
+    },
+    {
+      "name": "himas bars",
+      "direccion": "new york 329",
+      "img": "https://images.unsplash.com/photo-1543007630-9710e4a00a20?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8M3x8YmFyfGVufDB8fDB8fHww",
+      "pais": "india",
+      "referencias": "himachi pradesh",
+      "id": 12,
+      "atraccionid": 23,
+      "localDetalles": "un gran bar con buena higiene",
+      "": "d"
+    },
+    {
+      "name": "himes",
+      "direccion": "birma 232",
+      "img": "https://images.unsplash.com/photo-1543007630-9710e4a00a20?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8M3x8YmFyfGVufDB8fDB8fHww",
+      "pais": "india",
+      "referencias": "himachi pradesh",
+      "id": 13,
+      "atraccionid": 23,
+      "localDetalles": "genial funciona"
+    },
+    {
+      "name": "niagaras bars",
+      "direccion": "usa 233",
+      "img": "https://th.bing.com/th/id/OIG.31Uz3HQWSgHY601oW1QV?w=270&h=270&c=6&r=0&o=5&dpr=1.3&pid=ImgGn",
+      "pais": "estados unidos",
+      "referencias": "niagara cataratas",
+      "id": 14,
+      "atraccionid": 24,
+      "localDetalles": "muy buen bar con comida maritima"
     }
   ],
   "imageslocal": [
@@ -515,6 +593,38 @@
       "atraccionid": 21,
       "localid": 10,
       "id": 10
+    },
+    {
+      "img": "https://images.unsplash.com/photo-1667433776314-018332d7c4ad?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Nnx8YXRyYWNjaW9uJTIwZGUlMjBpbmRpYXxlbnwwfHwwfHx8MA%3D%3D",
+      "img2": "https://images.unsplash.com/photo-1667433776314-018332d7c4ad?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Nnx8YXRyYWNjaW9uJTIwZGUlMjBpbmRpYXxlbnwwfHwwfHx8MA%3D%3D",
+      "img3": "https://images.unsplash.com/photo-1667433776314-018332d7c4ad?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Nnx8YXRyYWNjaW9uJTIwZGUlMjBpbmRpYXxlbnwwfHwwfHx8MA%3D%3D",
+      "atraccionid": 22,
+      "localid": 11,
+      "id": 11
+    },
+    {
+      "img": "https://images.unsplash.com/photo-1543007630-9710e4a00a20?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8M3x8YmFyfGVufDB8fDB8fHww",
+      "img2": "https://images.unsplash.com/photo-1543007630-9710e4a00a20?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8M3x8YmFyfGVufDB8fDB8fHww",
+      "img3": "https://images.unsplash.com/photo-1543007630-9710e4a00a20?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8M3x8YmFyfGVufDB8fDB8fHww",
+      "atraccionid": 23,
+      "localid": 12,
+      "id": 12
+    },
+    {
+      "img": "https://images.unsplash.com/photo-1543007630-9710e4a00a20?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8M3x8YmFyfGVufDB8fDB8fHww",
+      "img2": "https://images.unsplash.com/photo-1543007630-9710e4a00a20?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8M3x8YmFyfGVufDB8fDB8fHww",
+      "img3": "https://images.unsplash.com/photo-1543007630-9710e4a00a20?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8M3x8YmFyfGVufDB8fDB8fHww",
+      "atraccionid": 23,
+      "localid": 13,
+      "id": 13
+    },
+    {
+      "img": "https://th.bing.com/th/id/OIG.31Uz3HQWSgHY601oW1QV?w=270&h=270&c=6&r=0&o=5&dpr=1.3&pid=ImgGn",
+      "img2": "https://th.bing.com/th/id/OIG.31Uz3HQWSgHY601oW1QV?w=270&h=270&c=6&r=0&o=5&dpr=1.3&pid=ImgGn",
+      "img3": "https://th.bing.com/th/id/OIG.31Uz3HQWSgHY601oW1QV?w=270&h=270&c=6&r=0&o=5&dpr=1.3&pid=ImgGn",
+      "atraccionid": 24,
+      "localid": 14,
+      "id": 14
     }
   ],
   "backup": [

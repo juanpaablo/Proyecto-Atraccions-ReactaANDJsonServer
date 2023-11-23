@@ -20,6 +20,7 @@ function Locales() {
     referencias: "",
     id: "",
     atraccionid:"",
+    localDetalles:""
   });
   const [imagesdata1, setimageadata1]= useState ()
   const [listatraccion, setlistatraccion] = useState([]);
@@ -92,7 +93,8 @@ console.log(idlocal)
       NewLocal.name === "" ||
       NewLocal.direccion === "" ||
       NewLocal.img === "" ||
-      NewLocal.pais === ""
+      NewLocal.pais === ""||
+      NewLocal.localDetalles === ""
     ) {
       toast.error("Por favor, complete todos los campos de imágenes.");
       return;
@@ -122,6 +124,7 @@ console.log(idlocal)
       img: "",
       pais: "",
       referencias: "",
+      localDetalles:""
     });
     setSelectedAtraccion("");
     setselectoption("");
@@ -221,6 +224,19 @@ console.log(idlocal)
             value={NewLocal.pais}
             onChange={handleChange}
             id="pais"
+          />
+        </div>
+        <div className="form-group">
+          <label className="label-atraccion"> detalles: </label>
+          <input
+            className="input"
+            aria-label="inserte detalles sobre el local"
+            placeholder="Insert detalles sobre el local"
+            type="text"
+            name="localDetalles"
+            value={NewLocal.localDetalles}
+            onChange={handleChange}
+            id="localDetalles"
           />
         </div>
         <div>

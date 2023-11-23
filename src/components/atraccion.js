@@ -12,7 +12,8 @@ function Atraccion (){
    img:"",
    latitud:"",
    longitud:"",
-   pais:""
+   pais:"",
+   detallesAtraccion:""
  });
  //el e.target.name hace referencia a la propiedad del input del html basicamente captura lo que haya en ese input con el nombre y lo pasa a la database
 const handleChange= (e) =>{
@@ -22,7 +23,7 @@ setNewAtraccion({
 })}
 const addAtraccion = async (e) =>{
     e.preventDefault();
-    if (NewAtraccion.name === "" || NewAtraccion.direccion === "" || NewAtraccion.img === ""|| NewAtraccion.pais === "") {
+    if (NewAtraccion.name === "" || NewAtraccion.direccion === "" || NewAtraccion.img === ""|| NewAtraccion.pais === ""|| NewAtraccion.detallesAtraccion === "") {
       toast.error("Por favor, complete todos los campos de imágenes.");
       return
     }
@@ -44,7 +45,8 @@ const resetform =() =>{
         img:"",
         latitud:"",
         longitud:"",
-        pais:""
+        pais:"",
+        detallesAtraccion:""
     })
 }
 return (
@@ -118,6 +120,18 @@ return (
             //hace referencia a esto
             name="pais"
             value={NewAtraccion.pais}
+            onChange={handleChange}
+          />
+        </div>
+        <div className="form-group">
+          <label className="label-atraccion"> detalles: </label>
+          <input
+            className="input"
+            placeholder="inserte detalles sobre la atraccion"
+            type="text"
+            //hace referencia a esto
+            name="detallesAtraccion"
+            value={NewAtraccion.detallesAtraccion}
             onChange={handleChange}
           />
         </div>

@@ -72,3 +72,7 @@ p.name-atraccion {
   align-content: center;
   text-align: center;
 }
+.localdetalles{
+  display: flex;
+  justify-content: center;
+}

@@ -12,6 +12,7 @@ import 'react-toastify/dist/ReactToastify.css';
 const AtraccionDetalles = () => {
   const { id } = useParams();
   const [detalles, setDetalles] = useState(null);
+  const [Detalleslocal, setDetalleslocal] = useState([]);
   const [showInput, setShowInput] = useState(false);
   const usuarios = sessionStorage.getItem("emailusuario");
   const [comentarios, setComentarios] = useState([]);
@@ -83,14 +84,16 @@ const AtraccionDetalles = () => {
 //esta funcion sirve para traer los datos de cada atraccion en especifico
   useEffect(() => {
     const url = `http://localhost:3005/atracciones/${id}`;
+    //const urldetalleslocal = `http://localhost:3005/locales/${id}`
 
     const getDetalles = async () => {
       try {
         const response = await axios.get(url);
         setDetalles(response.data);
+        //const res = await axios.get(urldetalleslocal)
+        //setDetalleslocal(res.data)
         const lat = parseFloat(response.data.latitud);
         const lng = parseFloat(response.data.longitud);
-
       //hace la peticion para obtener de la tabla images en la bd las imagenes restantes
       const imagenesResponse = await axios.get(`http://localhost:3005/images?atraccionid=${id}`);
       const imagenesResponselocales = await axios.get(`http://localhost:3005/imageslocal?atraccionid=${id}`);
@@ -120,12 +123,24 @@ console.log("Respuesta de imagenesResponselocales:", imagenesResponselocales.dat
   }, [id]);
   useEffect(() => {
     esconderInput();
-  }, []);
+  }, [Detalleslocal]);
   
+  useEffect(() =>{
+    const urldetalleslocal =(`http://localhost:3005/locales?atraccionid=${id}`)
+    const getDetalleslocal = async () =>{
+      try {
+        const response = await axios.get(urldetalleslocal)
+        setDetalleslocal(response.data)
+      } catch (error) {
+        console.error("error al obtener los datos ", error ) 
+      }
+    }
+    getDetalleslocal()
+  },[id])
   console.log(imageneslocal)
   console.log(detalles)
   console.log(imagenestest)
-
+  console.log(Detalleslocal)
   const imagenesprueba = [
     imagenestest,
     imagenestest1,
@@ -149,15 +164,25 @@ const imageneslocales = [
       <div className="barra-sup" >
         <Dropwdown></Dropwdown>
       </div>
-      {detalles ? (
+      {detalles  ? (
         <div >
-          <h1 className="name-atraccion-h1">Detalles de la atracción: {detalles.name}</h1>
+          <h1 className="name-atraccion-h1">Detalles de la atracción: {detalles.detallesAtraccion}</h1>
           <h2 className="name-atraccion-h2">{detalles.name}</h2>
           <Carrusel imagenes={imagenesprueba} />
-          <br></br>
-          <br></br>
-          <Carrusel imagenes={imageneslocales}/>
           <p className="name-atraccion" >{detalles.direccion}</p>
+          <br></br>
+          <br></br>
+          {Detalleslocal && Detalleslocal.length > 0 && Detalleslocal[0] && (
+          <div>
+          <Carrusel imagenes={imageneslocales}/>
+          <h3 className="localdetalles" >Nombre Local: {Detalleslocal[0].name}</h3>
+
+          <p className="localdetalles" >Dirección: {Detalleslocal[0].direccion}</p>
+
+          <p className="localdetalles" >Detalles: {Detalleslocal[0].localDetalles}</p>
+          </div>
+)}
+
           <div  className="mapeado-conteiner">
           <Mapeado center={coordenadas}  />
           </div>
