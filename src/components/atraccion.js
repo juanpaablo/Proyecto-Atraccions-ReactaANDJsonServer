@@ -59,6 +59,7 @@ return (
             placeholder="insert the name of the attraction"
             type="text"
             name="name"
+            aria-label="inserte el nombre de la atraccion"
             onChange={handleChange}
             value={NewAtraccion.name}
             required
@@ -71,6 +72,7 @@ return (
             placeholder="Insert direccion"
             type="text"
             name="direccion"
+            aria-label="inserte direccion"
             value={NewAtraccion.direccion}
             onChange={handleChange}
           />
@@ -80,6 +82,7 @@ return (
           <input
             className="input"
             placeholder="insert image url"
+            aria-label="inserte url"
             type="text"
             //hace referencia a esto
             name="img"
@@ -91,6 +94,7 @@ return (
           <label className="label-atraccion"> latitud: </label>
           <input
             className="input"
+            aria-label="inserte latitud"
             placeholder="insert latitud"
             type="text"
             //hace referencia a esto
@@ -103,6 +107,7 @@ return (
           <label className="label-atraccion"> longitud: </label>
           <input
             className="input"
+            aria-label="inserte longitud"
             placeholder="insert longitud"
             type="text"
             //hace referencia a esto
@@ -115,6 +120,7 @@ return (
           <label className="label-atraccion"> pais: </label>
           <input
             className="input"
+            aria-label="inserte el pais de la atraccion"
             placeholder="insert el pais de la atraccion"
             type="text"
             //hace referencia a esto
@@ -127,6 +133,7 @@ return (
           <label className="label-atraccion"> detalles: </label>
           <input
             className="input"
+            aria-label="inserte detalles sobre la atraccion"
             placeholder="inserte detalles sobre la atraccion"
             type="text"
             //hace referencia a esto

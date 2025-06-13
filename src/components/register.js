@@ -33,12 +33,11 @@ function Register() {
     const response = await axios.post(Url, newRegister);
     console.log(response);
     if (response.status === 201) {
-      alert(newRegister.name + " se agregó exitosamente");
+      toast.success(newRegister.name + " se agregó exitosamente");
       
-      console.log("se agrego correctamente")
      Resetform()
     } else {
-      alert("No se pudo agregar");
+      toast.error("No se pudo agregar");
     }
   };
   const Resetform = () => {
@@ -108,6 +107,7 @@ function Register() {
 
         <ToastContainer/>
       </form>
+      <Link to="/"> <button className="simple"> Main </button> </Link>
       <Link to="/atraccion"> <button className="simple"> agregar atracion</button> </Link>
     </div>
     

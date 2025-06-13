@@ -38,6 +38,27 @@
       "dni": "3232323",
       "email": "cel@gmail.com",
       "id": 6
+    },
+    {
+      "name": "jose ",
+      "lastname": "miel",
+      "dni": "44580739",
+      "email": "josemiel@hotmail.com",
+      "id": 7
+    },
+    {
+      "name": "joselito",
+      "lastname": "mern",
+      "dni": "44580733",
+      "email": "joselitomern@hotmail.com",
+      "id": 8
+    },
+    {
+      "name": "josel",
+      "lastname": "bufarini",
+      "dni": "44580777",
+      "email": "joselbufa@hotmail.com",
+      "id": 9
     }
   ],
   "atracciones": [
@@ -46,7 +67,9 @@
       "name": "circo de serafinoo",
       "direccion": "roma 140",
       "img": "https://images.unsplash.com/photo-1582204545593-1356b96cab4b?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=435&q=80",
-      "pais": "italia"
+      "pais": "italia",
+      "longitud": " 12.4924",
+      "latitud": "41.8902"
     },
     {
       "id": 9,
@@ -109,24 +132,32 @@
       "id": 22
     },
     {
+      "id": 23,
       "name": "himachi pradesh",
       "direccion": "birma 232",
       "img": "https://images.unsplash.com/photo-1643541930842-25f95aa30ff1?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NXx8aW5kaWElMjBhdHJhY2Npb258ZW58MHx8MHx8fDA%3D",
-      "latitud": "",
-      "longitud": "",
       "pais": "india",
-      "detallesAtraccion": "un gran edificio antiguo",
-      "id": 23
+      "longitud": "77.1734",
+      "latitud": "31.1048"
     },
     {
+      "id": 24,
       "name": "niagara cataratas",
       "direccion": "usa 23",
       "img": "https://images.unsplash.com/photo-1533094602577-198d3beab8ea?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8Y2F0YXJhdGFzJTIwZGVsJTIwbmklQzMlQTFnYXJhfGVufDB8fDB8fHww",
-      "latitud": "",
-      "longitud": "",
       "pais": "estados unidos",
-      "detallesAtraccion": "mucha agua y muy peligroso",
-      "id": 24
+      "longitud": "-79.0667",
+      "latitud": "43.0836"
+    },
+    {
+      "name": "auroria boreal",
+      "direccion": "islandia 232",
+      "img": "https://plus.unsplash.com/premium_photo-1669741180242-d7d58dea01cc?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTd8fGF0cmFjY2lvbmVzfGVufDB8fDB8fHww",
+      "latitud": "64.1466",
+      "longitud": "-21.9426",
+      "pais": "islandia",
+      "detallesAtraccion": "buenas vistas y mucha nieve",
+      "id": 25
     }
   ],
   "comentarios": [
@@ -268,6 +299,12 @@
       "email": "pablosalazar@outlook.com",
       "atraccionId": "10",
       "id": 23
+    },
+    {
+      "comments": "un gran lugar con buenos bares",
+      "email": "pablosalazar@outlook.com",
+      "atraccionId": "25",
+      "id": 24
     }
   ],
   "images": [
@@ -396,6 +433,13 @@
       "img3": "https://plus.unsplash.com/premium_photo-1661895337095-cc30b052a27c?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MXx8Y2F0YXJhdGFzJTIwZGVsJTIwbmklQzMlQTFnYXJhfGVufDB8fDB8fHww",
       "atraccionid": "24",
       "id": 21
+    },
+    {
+      "img1": "https://plus.unsplash.com/premium_photo-1669741180242-d7d58dea01cc?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTd8fGF0cmFjY2lvbmVzfGVufDB8fDB8fHww",
+      "img2": "https://plus.unsplash.com/premium_photo-1669741180242-d7d58dea01cc?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTd8fGF0cmFjY2lvbmVzfGVufDB8fDB8fHww",
+      "img3": "https://plus.unsplash.com/premium_photo-1669741180242-d7d58dea01cc?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTd8fGF0cmFjY2lvbmVzfGVufDB8fDB8fHww",
+      "atraccionid": "25",
+      "id": 22
     }
   ],
   "locales": [
@@ -519,6 +563,16 @@
       "id": 14,
       "atraccionid": 24,
       "localDetalles": "muy buen bar con comida maritima"
+    },
+    {
+      "name": "islandia bar",
+      "direccion": "island 232",
+      "img": "https://th.bing.com/th/id/OIG.Gch5SME6M4MZIj2eUdm1?w=270&h=270&c=6&r=0&o=5&dpr=1.3&pid=ImgGn",
+      "pais": "islandia",
+      "referencias": "auroria boreal",
+      "id": 15,
+      "atraccionid": 25,
+      "localDetalles": "buen local, con mucha nieve"
     }
   ],
   "imageslocal": [
@@ -625,6 +679,14 @@
       "atraccionid": 24,
       "localid": 14,
       "id": 14
+    },
+    {
+      "img": "https://th.bing.com/th/id/OIG.Gch5SME6M4MZIj2eUdm1?w=270&h=270&c=6&r=0&o=5&dpr=1.3&pid=ImgGn",
+      "img2": "https://th.bing.com/th/id/OIG.Gch5SME6M4MZIj2eUdm1?w=270&h=270&c=6&r=0&o=5&dpr=1.3&pid=ImgGn",
+      "img3": "https://th.bing.com/th/id/OIG.Gch5SME6M4MZIj2eUdm1?w=270&h=270&c=6&r=0&o=5&dpr=1.3&pid=ImgGn",
+      "atraccionid": 25,
+      "localid": 15,
+      "id": 15
     }
   ],
   "backup": [
